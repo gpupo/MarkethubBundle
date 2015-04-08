@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f400183997a90079428f8061712add72",
+    "hash": "2f260c5d542366d56f59aac69240ea4f",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -498,21 +498,21 @@
         },
         {
             "name": "gpupo/common-sdk",
-            "version": "1.1.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/common-sdk.git",
-                "reference": "32150502c64a17ea38248b371fd9925566bf05fe"
+                "reference": "85853eb216a6fbcedc2cfe5995be5812b2b959d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/32150502c64a17ea38248b371fd9925566bf05fe",
-                "reference": "32150502c64a17ea38248b371fd9925566bf05fe",
+                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/85853eb216a6fbcedc2cfe5995be5812b2b959d2",
+                "reference": "85853eb216a6fbcedc2cfe5995be5812b2b959d2",
                 "shasum": ""
             },
             "require": {
                 "gpupo/cache": "~1.2",
-                "gpupo/common": "~1.2",
+                "gpupo/common": "~1.3",
                 "php": ">=5.4",
                 "psr/log": "~1.0"
             },
@@ -527,7 +527,8 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Gpupo\\CommonSdk\\": "src"
+                    "Gpupo\\CommonSdk\\": "src",
+                    "Gpupo\\Tests\\CommonSdk\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -538,7 +539,7 @@
             "keywords": [
                 "sdk"
             ],
-            "time": "2015-04-01 20:36:20"
+            "time": "2015-04-08 12:27:20"
         },
         {
             "name": "gpupo/submarino-sdk",
@@ -546,17 +547,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/submarino-sdk.git",
-                "reference": "a0baa20b26b257df00e96d104e7588b8a37c4f03"
+                "reference": "248ea118cd6e0c0f3bb49869e8b72a91bb543202"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/a0baa20b26b257df00e96d104e7588b8a37c4f03",
-                "reference": "a0baa20b26b257df00e96d104e7588b8a37c4f03",
+                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/248ea118cd6e0c0f3bb49869e8b72a91bb543202",
+                "reference": "248ea118cd6e0c0f3bb49869e8b72a91bb543202",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.1.2",
+                "gpupo/common-sdk": "dev-master",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -590,7 +591,7 @@
                 "shoptime",
                 "submarino"
             ],
-            "time": "2015-04-06 17:15:33"
+            "time": "2015-04-08 12:36:09"
         },
         {
             "name": "monolog/monolog",

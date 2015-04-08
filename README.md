@@ -40,15 +40,14 @@ app/config/config_dev.yml:
 ```yaml
 markethub:
     submarino:
-        api_token: 'MySandbox@ApiToken'
+        - api_token: 'MySandbox@ApiToken'
 ```
-
 
 app/config/config_prod.yml:
 
 ```yaml
 markethub:
     submarino:
-        api_token: %markethub_submarino_api_token%
-        api_version: 'api'        
+        - api_token: %markethub_submarino_api_token%
+        - api_version: 'api'        
 ```
