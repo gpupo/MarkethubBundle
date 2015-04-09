@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="markethub.submarino.factory.class">Gpupo\Bundle\MarkethubBundle\Factory\SubmarinoFactory</parameter>
+        <parameter key="markethub.submarino.client.class">Gpupo\SubmarinoSdk\Client</parameter>
+        <parameter key="markethub.submarino.product.manager.class">Gpupo\SubmarinoSdk\Entity\Product\Manager</parameter>
+        <parameter key="markethub.submarino.product.sku.manager.class">Gpupo\SubmarinoSdk\Entity\Product\Sku\Manager</parameter>
+        <parameter key="markethub.submarino.order.manager.class">Gpupo\SubmarinoSdk\Entity\Order\Manager</parameter>
+        <parameter key="markethub.submarino" type="collection">
+            <parameter key="api_token" type="string"/>
+            <parameter key="api_version" type="string">sandbox</parameter>
+        </parameter>
+    </parameters>
+   <services>
+        <service id="markethub.submarino.factory" class="%markethub.submarino.factory.class%">
+            <argument>%markethub.submarino%</argument>
+            <argument type="service" id="logger" on-invalid="ignore"></argument>
+        </service>
+        <service id="markethub.submarino.client" class="%markethub.submarino.client.class%">
+            <factory service="markethub.submarino.factory" method="getClient" />
+        </service>
+        <service id="markethub.submarino.product.manager" class="%markethub.submarino.product.manager.class%">
+            <factory service="markethub.submarino.factory" method="factoryManager" />
+            <argument>%markethub.submarino.product.manager.class%</argument>
+        </service>
+        <service id="markethub.submarino.product.sku.manager" class="%markethub.submarino.product.sku.manager.class%">
+            <factory service="markethub.submarino.factory" method="factoryManager" />
+            <argument>%markethub.submarino.product.sku.manager.class%</argument>
+        </service>
+        <service id="markethub.submarino.order.manager" class="%markethub.submarino.order.manager.class%">
+            <factory service="markethub.submarino.factory" method="factoryManager" />
+            <argument>%markethub.submarino.order.manager.class%</argument>
+        </service>
+    </services>
+</container>
