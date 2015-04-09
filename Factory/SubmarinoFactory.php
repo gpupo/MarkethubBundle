@@ -6,6 +6,13 @@ use Gpupo\SubmarinoSdk\Client;
 
 class SubmarinoFactory extends FactoryAbstract
 {
+    public function getDelegateSchema($key)
+    {
+        $list = $this->getGenericSchemaByNamespace('\Gpupo\SubmarinoSdk\Entity\\');
+        
+        return $this->resolvSchema($list, $key);
+    }
+    
     public function setClient()
     {
         $clientOptions =  [
