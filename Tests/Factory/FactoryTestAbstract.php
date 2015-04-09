@@ -16,11 +16,11 @@ namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
 use Gpupo\Bundle\MarkethubBundle\Tests\TestCaseAbstract;
 
 abstract class FactoryTestAbstract extends TestCaseAbstract
-{   
+{
     protected $factoryId;
-    
+
     abstract public function dataProviderServices();
-    
+
     /**
      * @expectedException \BadMethodCallException
      */
@@ -28,7 +28,7 @@ abstract class FactoryTestAbstract extends TestCaseAbstract
     {
         return $this->container->get($this->factoryId)->createDinossauro([]);
     }
-    
+
     /**
      * @dataProvider dataProviderServices
      */
@@ -36,13 +36,13 @@ abstract class FactoryTestAbstract extends TestCaseAbstract
     {
         $this->assertInstanceOf($objectExpected, $this->container->get($serviceId));
     }
-    
+
     /**
      * @dataProvider dataProviderProdutos
      */
     public function testCriaObjetoProduto($objectExpected, $name, array $data = null)
     {
-        $method = 'create' . ucfirst($name);
+        $method = 'create'.ucfirst($name);
         $this->assertInstanceOf($objectExpected, $this->container
             ->get($this->factoryId)->$method($data));
     }
