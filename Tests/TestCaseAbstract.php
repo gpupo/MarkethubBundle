@@ -11,12 +11,10 @@
  * @version 1.0
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Tests\DependencyInjection;
+namespace Gpupo\Bundle\MarkethubBundle\Tests;
 
 use Gpupo\Bundle\MarkethubBundle\DependencyInjection\MarkethubExtension;
-use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 abstract class TestCaseAbstract extends \PHPUnit_Framework_TestCase
 {
@@ -28,11 +26,7 @@ abstract class TestCaseAbstract extends \PHPUnit_Framework_TestCase
         $this->extension = new MarkethubExtension();
         $this->container = new ContainerBuilder();
         $this->container->registerExtension($this->extension);
-    }
-
-    protected function loadConfiguration(ContainerBuilder $container, $resource)
-    {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/Fixtures/Config/'));
-        $loader->load($resource.'.yml');
+        $this->container->loadFromExtension($this->extension->getAlias());
+        $this->container->compile();
     }
 }
