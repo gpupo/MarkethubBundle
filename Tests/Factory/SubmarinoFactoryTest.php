@@ -15,6 +15,8 @@ namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
 
 class SubmarinoFactoryTest extends FactoryTestAbstract
 {   
+    protected $factoryId = 'markethub.submarino.factory';
+    
     public function dataProviderServices()
     {
         return [
@@ -23,6 +25,15 @@ class SubmarinoFactoryTest extends FactoryTestAbstract
             ['\Gpupo\SubmarinoSdk\Entity\Product\Manager', 'markethub.submarino.product.manager'],
             ['\Gpupo\SubmarinoSdk\Entity\Product\Sku\Manager', 'markethub.submarino.product.sku.manager'],
             ['\Gpupo\SubmarinoSdk\Entity\Order\Manager','markethub.submarino.order.manager'],
+        ];
+    }
+    
+    public function dataProviderProdutos()
+    {
+        return [
+            ['\Gpupo\SubmarinoSdk\Entity\Product\Product', 'product', null],
+            ['\Gpupo\SubmarinoSdk\Entity\Product\Sku\Sku', 'sku', null],
+            ['\Gpupo\SubmarinoSdk\Entity\Order\Order', 'order', null],
         ];
     }
 }
