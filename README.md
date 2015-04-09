@@ -1,12 +1,12 @@
 # MarkethubBundle
 
-## Install
+## Instalação
 
-Use [Composer](http://getcomposer.com) to install the bundle:
+Usando [Composer](http://getcomposer.com):
 
     composer require gpupo/markethub-bundle:~1.0
 
-Then register the bundle in you kernel. For example:
+Registre o bundle no Kernel:
 
 ```php
 <?php
@@ -40,7 +40,7 @@ app/config/config_dev.yml:
 ```yaml
 markethub:
     submarino:
-        - api_token: 'MySandbox@ApiToken'
+        -api_token: 'MySandbox@ApiToken'
 ```
 
 app/config/config_prod.yml:
@@ -48,8 +48,8 @@ app/config/config_prod.yml:
 ```yaml
 markethub:
     submarino:
-        - api_token: %markethub_submarino_api_token%
-        - api_version: 'api'        
+        api_token: %markethub_submarino_api_token%
+        api_version: 'api'        
 ```
     
 ## Market places disponíveis:
@@ -59,7 +59,7 @@ markethub:
 
 ## Serviços disponíveis:
 
-(considere %nome_marketplace% como valor a ser preenchido)
+(considere ``%nome_marketplace%`` como valor a ser preenchido)
 
 - markethub.%nome_marketplace%.factory
 - markethub.%nome_marketplace%.client
@@ -101,19 +101,19 @@ echo $product->getName(); // Acesso ao nome do produto #9
 
 // Criação de um produto:
 $data = [];
-$product = $this->('markethub.submarino.factory')->createProduct($data);
+$product = $this->get('markethub.submarino.factory')->createProduct($data);
 
 foreach ($data['sku'] as $item) {
-    $sku = $this->('markethub.submarino.factory')->createSku($item);
+    $sku = $this->get('markethub.submarino.factory')->createSku($item);
     $product->getSku()->add($sku);
 }
 
-$this->('markethub.submarino.product.manager')->save($product);
+$this->get('markethub.submarino.product.manager')->save($product);
 
 //Adicionando SKU ao produto:
 $skuData = [];
-$novoSku = $this->('markethub.submarino.factory')->createSku($skuData);
+$novoSku = $this->get('markethub.submarino.factory')->createSku($skuData);
 $product->getSku()->add($novoSku);
-$this->('markethub.submarino.product.manager')->save($product);
+$this->get('markethub.submarino.product.manager')->save($product);
 
 ```
