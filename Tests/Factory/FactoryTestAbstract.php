@@ -13,14 +13,17 @@
 
 namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
 
-use Gpupo\Bundle\MarkethubBundle\Tests\TestCaseAbstract;
+use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
+use Gpupo\Bundle\MarkethubBundle\Tests\Traits\SetupContainerTrait;
 
-abstract class FactoryTestAbstract extends TestCaseAbstract
+abstract class FactoryTestAbstract extends CommonTest
 {
-    protected $factoryId;
-
-    abstract public function dataProviderServices();
-
+    use SetupContainerTrait;
+    
+    public function getFactory()
+    {
+        return $this->container->get($this->factoryId);
+    }
     /**
      * @expectedException \BadMethodCallException
      */
@@ -37,13 +40,5 @@ abstract class FactoryTestAbstract extends TestCaseAbstract
         $this->assertInstanceOf($objectExpected, $this->container->get($serviceId));
     }
 
-    /**
-     * @dataProvider dataProviderProdutos
-     */
-    public function testCriaObjetoProduto($objectExpected, $name, array $data = null)
-    {
-        $method = 'create'.ucfirst($name);
-        $this->assertInstanceOf($objectExpected, $this->container
-            ->get($this->factoryId)->$method($data));
-    }
+    abstract public function dataProviderServices();    
 }

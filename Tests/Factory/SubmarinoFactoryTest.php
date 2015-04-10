@@ -28,7 +28,7 @@ class SubmarinoFactoryTest extends FactoryTestAbstract
         ];
     }
 
-    public function dataProviderProdutos()
+    public function dataProviderObjetos()
     {
         return [
             ['\Gpupo\SubmarinoSdk\Entity\Product\Product', 'product', null],

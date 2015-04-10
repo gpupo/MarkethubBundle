@@ -13,24 +13,17 @@
 
 namespace Gpupo\Bundle\MarkethubBundle\Factory;
 
-use Gpupo\SubmarinoSdk\Client;
+use Gpupo\SubmarinoSdk\Factory;
 
-class SubmarinoFactory extends FactoryAbstract
+class SubmarinoFactory extends Factory
 {
-    public function getDelegateSchema($key)
-    {
-        $list = $this->getGenericSchemaByNamespace('\Gpupo\SubmarinoSdk\Entity\\');
-
-        return $this->resolvSchema($list, $key);
-    }
-
-    public function setClient()
+    public function setClient(array $clientOptions = null)
     {
         $clientOptions =  [
             'token'     => $this->config['api_token'],
             'version'   => $this->config['api_version'],
         ];
 
-        $this->client =  new Client($clientOptions, $this->logger);
+        return parent::setClient($clientOptions);
     }
 }
