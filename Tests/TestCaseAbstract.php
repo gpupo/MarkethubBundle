@@ -13,20 +13,9 @@
 
 namespace Gpupo\Bundle\MarkethubBundle\Tests;
 
-use Gpupo\Bundle\MarkethubBundle\DependencyInjection\MarkethubExtension;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Gpupo\Bundle\MarkethubBundle\Tests\Traits\SetupContainerTrait;
 
 abstract class TestCaseAbstract extends \PHPUnit_Framework_TestCase
 {
-    protected $extension;
-    protected $container;
-
-    protected function setUp()
-    {
-        $this->extension = new MarkethubExtension();
-        $this->container = new ContainerBuilder();
-        $this->container->registerExtension($this->extension);
-        $this->container->loadFromExtension($this->extension->getAlias());
-        $this->container->compile();
-    }
+    use SetupContainerTrait;
 }

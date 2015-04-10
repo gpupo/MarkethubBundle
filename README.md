@@ -40,7 +40,7 @@ app/config/config_dev.yml:
 ```yaml
 markethub:
     submarino:
-        -api_token: 'MySandbox@ApiToken'
+        api_token: 'MySandbox@ApiToken'
 ```
 
 app/config/config_prod.yml:
@@ -90,10 +90,10 @@ services no escopo onde Container está presente.
 ///...
 
 // Acesso a lista de produtos cadastrados, utilizando SF2 service:
-$produtosCadastrados = $this->('markethub.submarino.order.manager')->fetch(); // Collection de Objetos Product
+$produtosCadastrados = $this->get('markethub.submarino.order.manager')->fetch(); // Collection de Objetos Product
 
 // Acesso a informações de um produto cadastrado e com identificador conhecido:
-$produto = $this->('markethub.submarino.product.manager')->findById(9)); // Objeto Produto
+$produto = $this->get('markethub.submarino.product.manager')->findById(9)); // Objeto Produto
 
 echo $product->getName(); // Acesso ao nome do produto #9
 
