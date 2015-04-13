@@ -1,4 +1,14 @@
-# MarkethubBundle
+[![Build Status](https://secure.travis-ci.org/gpupo/MarkethubBundle.png?branch=master)](http://travis-ci.org/gpupo/MarkethubBundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/MarkethubBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/MarkethubBundle/?branch=master)
+
+
+# MarkethubBundle - Integração de SDKs para Marketplaces com Symfony2 
+    
+## Market places disponíveis:
+
+- B2W
+- CNOVA
+
 
 ## Instalação
 
@@ -117,3 +127,13 @@ $product->getSku()->add($novoSku);
 $this->get('markethub.submarino.product.manager')->save($product);
 
 ```
+    
+# Desenvolvimento
+
+    git clone --depth=1  git@github.com:gpupo/MarkethubBundle.git
+
+    cd MarkethubBundle;
+    
+    composer install;
+
+    phpunit;
