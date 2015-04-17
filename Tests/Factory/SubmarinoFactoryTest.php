@@ -21,7 +21,7 @@ class SubmarinoFactoryTest extends FactoryTestAbstract
     {
         return [
             ['\Gpupo\Bundle\MarkethubBundle\Factory\SubmarinoFactory', 'markethub.submarino.factory'],
-            ['\Gpupo\CommonSdk\ClientInterface', 'markethub.submarino.client'],
+            ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.submarino.client'],
             ['\Gpupo\SubmarinoSdk\Entity\Product\Manager', 'markethub.submarino.product.manager'],
             ['\Gpupo\SubmarinoSdk\Entity\Product\Sku\Manager', 'markethub.submarino.product.sku.manager'],
             ['\Gpupo\SubmarinoSdk\Entity\Order\Manager','markethub.submarino.order.manager'],
