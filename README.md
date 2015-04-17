@@ -1,9 +1,9 @@
 [![Build Status](https://secure.travis-ci.org/gpupo/MarkethubBundle.png?branch=master)](http://travis-ci.org/gpupo/MarkethubBundle)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/MarkethubBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/MarkethubBundle/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/e4572276-e535-43b3-88ff-0bbc3cdcff3f/small.png)](https://insight.sensiolabs.com/projects/e4572276-e535-43b3-88ff-0bbc3cdcff3f)
 
+# MarkethubBundle - Integração de SDKs para Marketplaces com Symfony2
 
-# MarkethubBundle - Integração de SDKs para Marketplaces com Symfony2 
-    
 ## Market places disponíveis:
 
 - B2W
@@ -35,7 +35,7 @@ class AppKernel extends Kernel
 }
 ```
 
-## Setup 
+## Setup
 
 app/config/parameters.yml :
 
@@ -59,9 +59,9 @@ app/config/config_prod.yml:
 markethub:
     submarino:
         api_token: %markethub_submarino_api_token%
-        api_version: 'api'        
+        api_version: 'api'
 ```
-    
+
 ## Market places disponíveis:
 
 - submarino
@@ -127,13 +127,14 @@ $product->getSku()->add($novoSku);
 $this->get('markethub.submarino.product.manager')->save($product);
 
 ```
-    
+
 # Desenvolvimento
 
     git clone --depth=1  git@github.com:gpupo/MarkethubBundle.git
 
     cd MarkethubBundle;
-    
+
     composer install;
 
     phpunit;
+    
