@@ -23,7 +23,7 @@ class CnovaFactoryTest extends FactoryTestAbstract
             ['\Gpupo\Bundle\MarkethubBundle\Factory\CnovaFactory', 'markethub.cnova.factory'],
             ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.cnova.client'],
             ['\Gpupo\CnovaSdk\Entity\Product\Manager', 'markethub.cnova.product.manager'],
-            ['\Gpupo\CnovaSdk\Entity\Order\Manager','markethub.cnova.order.manager'],
+            ['\Gpupo\CnovaSdk\Entity\Order\Manager', 'markethub.cnova.order.manager'],
         ];
     }
 
@@ -37,11 +37,9 @@ class CnovaFactoryTest extends FactoryTestAbstract
 
     /**
      * @dataProvider dataProviderObjetos
-     *
      */
     public function testCentralizaCriacaoDeObjetos($objectExpected, $name, array $data = null)
     {
         return $this->markIncomplete();
-
     }
 }
