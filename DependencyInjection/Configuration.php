@@ -34,6 +34,16 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
                     ->end()
                 ->end()
+                ->arrayNode('cnova')
+                    ->children()
+                        ->booleanNode('enabled')->defaultFalse()->end()
+                        ->scalarNode('client_id')->defaultValue('')->end()
+                        ->scalarNode('access_token')->defaultValue('')->end()
+                        ->scalarNode('api_version')->defaultValue('sandbox')->end()
+                        ->booleanNode('verbose')->defaultFalse()->end()
+                        ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;
