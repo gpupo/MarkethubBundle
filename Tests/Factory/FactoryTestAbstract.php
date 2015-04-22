@@ -13,13 +13,13 @@
 
 namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
 
-use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
 use Gpupo\Bundle\MarkethubBundle\Tests\Traits\SetupContainerTrait;
+use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
 
 abstract class FactoryTestAbstract extends CommonTest
 {
     use SetupContainerTrait;
-    
+
     public function getFactory()
     {
         return $this->container->get($this->factoryId);
@@ -40,5 +40,5 @@ abstract class FactoryTestAbstract extends CommonTest
         $this->assertInstanceOf($objectExpected, $this->container->get($serviceId));
     }
 
-    abstract public function dataProviderServices();    
+    abstract public function dataProviderServices();
 }

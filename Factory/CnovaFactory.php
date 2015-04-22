@@ -19,7 +19,7 @@ class CnovaFactory extends Factory
 {
     public function setClient(array $clientOptions = null)
     {
-        $clientOptions =  [
+        $clientOptions = [
             'client_id'     => $this->config['client_id'],
             'access_token'  => $this->config['access_token'],
             'version'       => $this->config['api_version'],
