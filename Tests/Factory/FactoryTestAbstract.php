@@ -24,6 +24,7 @@ abstract class FactoryTestAbstract extends CommonTest
     {
         return $this->container->get($this->factoryId);
     }
+    
     /**
      * @expectedException \BadMethodCallException
      */

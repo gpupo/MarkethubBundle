@@ -41,6 +41,7 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('access_token')->defaultValue('')->end()
                         ->scalarNode('api_version')->defaultValue('sandbox')->end()
                         ->booleanNode('verbose')->defaultFalse()->end()
+                        ->scalarNode('register_path')->defaultValue('')->end()
                         ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
                     ->end()
                 ->end()
