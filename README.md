@@ -7,7 +7,7 @@
 ## Market places disponíveis:
 
 - B2W
-- CNOVA
+- Cnova
 
 
 ## Instalação
@@ -137,4 +137,3 @@ $this->get('markethub.submarino.product.manager')->save($product);
     composer install;
 
     phpunit;
-    

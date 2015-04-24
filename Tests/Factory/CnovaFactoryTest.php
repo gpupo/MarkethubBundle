@@ -35,11 +35,4 @@ class CnovaFactoryTest extends FactoryTestAbstract
         ];
     }
 
-    /**
-     * @dataProvider dataProviderObjetos
-     */
-    public function testCentralizaCriacaoDeObjetos($objectExpected, $name, array $data = null)
-    {
-        return $this->markIncomplete();
-    }
 }

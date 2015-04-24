@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6458fd4c65800c7c9f0bf21299be3351",
+    "hash": "ced711388d05fa5d057fcb55471b8a8a",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -456,21 +456,21 @@
         },
         {
             "name": "gpupo/cnova-sdk",
-            "version": "1.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/cnova-sdk.git",
-                "reference": "a802111aa3bf83a44d13000839fb8ec6bc9319c3"
+                "reference": "ea002fb22b143dbeedf5865bc5a01f102ab38a74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/cnova-sdk/zipball/a802111aa3bf83a44d13000839fb8ec6bc9319c3",
-                "reference": "a802111aa3bf83a44d13000839fb8ec6bc9319c3",
+                "url": "https://api.github.com/repos/gpupo/cnova-sdk/zipball/ea002fb22b143dbeedf5865bc5a01f102ab38a74",
+                "reference": "ea002fb22b143dbeedf5865bc5a01f102ab38a74",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.5.3",
+                "gpupo/common-sdk": "~1.7.3",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -478,7 +478,6 @@
                 "phpunit/phpunit": "~4.0"
             },
             "suggest": {
-                "mockery/mockery": "0.9.*@dev",
                 "monolog/monolog": "Write Log messages"
             },
             "type": "library",
@@ -500,7 +499,7 @@
                 "pontofrio",
                 "sdk"
             ],
-            "time": "2015-04-22 17:39:50"
+            "time": "2015-04-24 18:46:57"
         },
         {
             "name": "gpupo/common",
@@ -546,16 +545,16 @@
         },
         {
             "name": "gpupo/common-sdk",
-            "version": "1.5.4",
+            "version": "1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/common-sdk.git",
-                "reference": "dfd62c3ba387bdcc3e5190a4dd36c0dfb6d6c604"
+                "reference": "e02fda8a61728e9d1f3261a40f7615724e19af6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/dfd62c3ba387bdcc3e5190a4dd36c0dfb6d6c604",
-                "reference": "dfd62c3ba387bdcc3e5190a4dd36c0dfb6d6c604",
+                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/e02fda8a61728e9d1f3261a40f7615724e19af6a",
+                "reference": "e02fda8a61728e9d1f3261a40f7615724e19af6a",
                 "shasum": ""
             },
             "require": {
@@ -568,11 +567,6 @@
                 "phpunit/phpunit": "~4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Gpupo\\CommonSdk\\": "src",
@@ -587,25 +581,25 @@
             "keywords": [
                 "sdk"
             ],
-            "time": "2015-04-20 21:00:34"
+            "time": "2015-04-24 18:42:01"
         },
         {
             "name": "gpupo/submarino-sdk",
-            "version": "2.1.3",
+            "version": "2.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/submarino-sdk.git",
-                "reference": "e5bbd9ad9a1966a0f16e25f861334765f792b21c"
+                "reference": "e1a8778f5ecbaaa4e99db972b8f2c340c7d7840b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/e5bbd9ad9a1966a0f16e25f861334765f792b21c",
-                "reference": "e5bbd9ad9a1966a0f16e25f861334765f792b21c",
+                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/e1a8778f5ecbaaa4e99db972b8f2c340c7d7840b",
+                "reference": "e1a8778f5ecbaaa4e99db972b8f2c340c7d7840b",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.5.1",
+                "gpupo/common-sdk": "~1.7.2",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -634,7 +628,7 @@
                 "shoptime",
                 "submarino"
             ],
-            "time": "2015-04-20 11:53:18"
+            "time": "2015-04-23 20:36:49"
         },
         {
             "name": "psr/log",
