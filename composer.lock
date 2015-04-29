@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ced711388d05fa5d057fcb55471b8a8a",
+    "hash": "9e53ef8f51ba3002d71bd176f24e9134",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -456,21 +456,21 @@
         },
         {
             "name": "gpupo/cnova-sdk",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/cnova-sdk.git",
-                "reference": "ea002fb22b143dbeedf5865bc5a01f102ab38a74"
+                "reference": "b736697e9882a29afd32dbb57effad1c2f3fa22f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/cnova-sdk/zipball/ea002fb22b143dbeedf5865bc5a01f102ab38a74",
-                "reference": "ea002fb22b143dbeedf5865bc5a01f102ab38a74",
+                "url": "https://api.github.com/repos/gpupo/cnova-sdk/zipball/b736697e9882a29afd32dbb57effad1c2f3fa22f",
+                "reference": "b736697e9882a29afd32dbb57effad1c2f3fa22f",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.7.3",
+                "gpupo/common-sdk": "~1.8.2",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -499,7 +499,7 @@
                 "pontofrio",
                 "sdk"
             ],
-            "time": "2015-04-24 18:46:57"
+            "time": "2015-04-29 18:07:52"
         },
         {
             "name": "gpupo/common",
@@ -545,16 +545,16 @@
         },
         {
             "name": "gpupo/common-sdk",
-            "version": "1.7.4",
+            "version": "1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/common-sdk.git",
-                "reference": "e02fda8a61728e9d1f3261a40f7615724e19af6a"
+                "reference": "4abdf889a2f20b04c8881e78dd599c315f47f2e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/e02fda8a61728e9d1f3261a40f7615724e19af6a",
-                "reference": "e02fda8a61728e9d1f3261a40f7615724e19af6a",
+                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/4abdf889a2f20b04c8881e78dd599c315f47f2e2",
+                "reference": "4abdf889a2f20b04c8881e78dd599c315f47f2e2",
                 "shasum": ""
             },
             "require": {
@@ -581,25 +581,25 @@
             "keywords": [
                 "sdk"
             ],
-            "time": "2015-04-24 18:42:01"
+            "time": "2015-04-29 17:38:38"
         },
         {
             "name": "gpupo/submarino-sdk",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/submarino-sdk.git",
-                "reference": "e1a8778f5ecbaaa4e99db972b8f2c340c7d7840b"
+                "reference": "48f2d382e49fe21c2b57155e7540c9a80c0ebf41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/e1a8778f5ecbaaa4e99db972b8f2c340c7d7840b",
-                "reference": "e1a8778f5ecbaaa4e99db972b8f2c340c7d7840b",
+                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/48f2d382e49fe21c2b57155e7540c9a80c0ebf41",
+                "reference": "48f2d382e49fe21c2b57155e7540c9a80c0ebf41",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.7.2",
+                "gpupo/common-sdk": "~1.8.2",
                 "php": ">=5.4"
             },
             "require-dev": {
@@ -628,7 +628,7 @@
                 "shoptime",
                 "submarino"
             ],
-            "time": "2015-04-23 20:36:49"
+            "time": "2015-04-29 18:48:39"
         },
         {
             "name": "psr/log",
@@ -1262,16 +1262,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.4.0",
+            "version": "v1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "8724cd239f8ef4c046f55a3b18b4d91cc7f3e4c5"
+                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/8724cd239f8ef4c046f55a3b18b4d91cc7f3e4c5",
-                "reference": "8724cd239f8ef4c046f55a3b18b4d91cc7f3e4c5",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
+                "reference": "3132b1f44c7bf2ec4c7eb2d3cb78fdeca760d373",
                 "shasum": ""
             },
             "require": {
@@ -1318,7 +1318,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2015-03-27 19:31:25"
+            "time": "2015-04-27 22:15:08"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1568,16 +1568,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.4",
+            "version": "4.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "163232991e652e6efed2f8470326fffa61e848e2"
+                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/163232991e652e6efed2f8470326fffa61e848e2",
-                "reference": "163232991e652e6efed2f8470326fffa61e848e2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3afe303d873a4d64c62ef84de491b97b006fbdac",
+                "reference": "3afe303d873a4d64c62ef84de491b97b006fbdac",
                 "shasum": ""
             },
             "require": {
@@ -1636,7 +1636,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-11 05:23:21"
+            "time": "2015-04-29 15:18:52"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
