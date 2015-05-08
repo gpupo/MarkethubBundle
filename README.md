@@ -2,6 +2,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gpupo/MarkethubBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gpupo/MarkethubBundle/?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/e4572276-e535-43b3-88ff-0bbc3cdcff3f/small.png)](https://insight.sensiolabs.com/projects/e4572276-e535-43b3-88ff-0bbc3cdcff3f)
 
+
 # MarkethubBundle - Integração de SDKs para Marketplaces com Symfony2
 
 ## Market places disponíveis:
