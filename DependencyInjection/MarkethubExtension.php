@@ -22,13 +22,19 @@ class MarkethubExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-        $configuration = new Configuration();
-        $config = $this->processConfiguration($configuration, $configs);
-
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         foreach (['submarino', 'cnova'] as $sdk) {
             $loader->load($sdk.'-sdk.xml');
         }
+
+        $configuration = $this->getConfiguration($configs, $container);
+        
+        return $this->processConfiguration($configuration, $configs);
+    }
+
+    public function getConfiguration(array $config, ContainerBuilder $container)
+    {
+        return new Configuration($container->getParameter('kernel.debug'));
     }
 }
