@@ -25,6 +25,7 @@ class CnovaFactory extends Factory
             'version'       => $this->config['api_version'],
             'verbose'       => $this->config['verbose'],
             'sslVersion'    => $this->config['ssl_version'],
+            'sslVerifyPeer' => $this->config['ssl_verify_peer'],
             'registerPath'  => $this->config['register_path'],
         ];
 

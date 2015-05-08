@@ -43,6 +43,7 @@ class Configuration implements ConfigurationInterface
                         ->booleanNode('verbose')->defaultFalse()->end()
                         ->scalarNode('register_path')->defaultValue('')->end()
                         ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
+                        ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
                     ->end()
                 ->end()
             ->end();
