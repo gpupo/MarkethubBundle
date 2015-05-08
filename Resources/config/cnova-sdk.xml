@@ -15,6 +15,7 @@
             <parameter key="verbose" type="string">false</parameter>
             <parameter key="register_path" type="string"/>
             <parameter key="ssl_version" type="string">SecureTransport</parameter>
+            <parameter key="ssl_verify_peer" type="string">true</parameter>
         </parameter>
     </parameters>
    <services>
