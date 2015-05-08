@@ -20,11 +20,13 @@ abstract class FactoryTestAbstract extends CommonTest
 {
     use SetupContainerTrait;
 
+    protected $factoryId;
+
     public function getFactory()
     {
         return $this->container->get($this->factoryId);
     }
-    
+
     /**
      * @expectedException \BadMethodCallException
      */
