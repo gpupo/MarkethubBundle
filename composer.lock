@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9e53ef8f51ba3002d71bd176f24e9134",
+    "hash": "8296c76863dbdb0c7fb29d32e3964b23",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -456,22 +456,23 @@
         },
         {
             "name": "gpupo/cnova-sdk",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/cnova-sdk.git",
-                "reference": "b736697e9882a29afd32dbb57effad1c2f3fa22f"
+                "reference": "26ecee09761a6a26725754498e0b21ec80c46cd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/cnova-sdk/zipball/b736697e9882a29afd32dbb57effad1c2f3fa22f",
-                "reference": "b736697e9882a29afd32dbb57effad1c2f3fa22f",
+                "url": "https://api.github.com/repos/gpupo/cnova-sdk/zipball/26ecee09761a6a26725754498e0b21ec80c46cd3",
+                "reference": "26ecee09761a6a26725754498e0b21ec80c46cd3",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.8.2",
-                "php": ">=5.4"
+                "gpupo/common-sdk": "~1.8.6",
+                "php": ">=5.4",
+                "symfony/console": "~2.6"
             },
             "require-dev": {
                 "monolog/monolog": "~1.12",
@@ -499,7 +500,7 @@
                 "pontofrio",
                 "sdk"
             ],
-            "time": "2015-04-29 18:07:52"
+            "time": "2015-05-06 19:45:35"
         },
         {
             "name": "gpupo/common",
@@ -545,16 +546,16 @@
         },
         {
             "name": "gpupo/common-sdk",
-            "version": "1.8.3",
+            "version": "1.8.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/common-sdk.git",
-                "reference": "4abdf889a2f20b04c8881e78dd599c315f47f2e2"
+                "reference": "f1a9ce8da5e45bd72026a80c9617adab0e580912"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/4abdf889a2f20b04c8881e78dd599c315f47f2e2",
-                "reference": "4abdf889a2f20b04c8881e78dd599c315f47f2e2",
+                "url": "https://api.github.com/repos/gpupo/common-sdk/zipball/f1a9ce8da5e45bd72026a80c9617adab0e580912",
+                "reference": "f1a9ce8da5e45bd72026a80c9617adab0e580912",
                 "shasum": ""
             },
             "require": {
@@ -564,6 +565,7 @@
                 "psr/log": "~1.0"
             },
             "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
                 "phpunit/phpunit": "~4.0"
             },
             "type": "library",
@@ -581,28 +583,30 @@
             "keywords": [
                 "sdk"
             ],
-            "time": "2015-04-29 17:38:38"
+            "time": "2015-05-08 13:40:55"
         },
         {
             "name": "gpupo/submarino-sdk",
-            "version": "2.1.5",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gpupo/submarino-sdk.git",
-                "reference": "48f2d382e49fe21c2b57155e7540c9a80c0ebf41"
+                "reference": "fbd48ace2a26e540b0fad47582740a9793329b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/48f2d382e49fe21c2b57155e7540c9a80c0ebf41",
-                "reference": "48f2d382e49fe21c2b57155e7540c9a80c0ebf41",
+                "url": "https://api.github.com/repos/gpupo/submarino-sdk/zipball/fbd48ace2a26e540b0fad47582740a9793329b60",
+                "reference": "fbd48ace2a26e540b0fad47582740a9793329b60",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
-                "gpupo/common-sdk": "~1.8.2",
-                "php": ">=5.4"
+                "gpupo/common-sdk": "~1.8.13",
+                "php": ">=5.4",
+                "symfony/console": "~2.6"
             },
             "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
                 "monolog/monolog": "~1.12",
                 "phpunit/phpunit": "~4.0"
             },
@@ -628,7 +632,7 @@
                 "shoptime",
                 "submarino"
             ],
-            "time": "2015-04-29 18:48:39"
+            "time": "2015-05-08 16:57:57"
         },
         {
             "name": "psr/log",
@@ -716,6 +720,64 @@
                 }
             ],
             "description": "Symfony Config Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-03-30 15:54:10"
+        },
+        {
+            "name": "symfony/console",
+            "version": "v2.6.6",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/5b91dc4ed5eb08553f57f6df04c4730a73992667",
+                "reference": "5b91dc4ed5eb08553f57f6df04c4730a73992667",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/phpunit-bridge": "~2.7",
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
             "time": "2015-03-30 15:54:10"
         },
