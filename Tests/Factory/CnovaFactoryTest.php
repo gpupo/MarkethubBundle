@@ -34,5 +34,4 @@ class CnovaFactoryTest extends FactoryTestAbstract
             ['\Gpupo\CnovaSdk\Entity\Order\Order', 'order', null],
         ];
     }
-
 }

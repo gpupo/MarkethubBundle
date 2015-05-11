@@ -29,7 +29,7 @@ class MarkethubExtension extends Extension
         }
 
         $configuration = $this->getConfiguration($configs, $container);
-        
+
         return $this->processConfiguration($configuration, $configs);
     }
 
