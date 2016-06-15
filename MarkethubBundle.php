@@ -10,7 +10,6 @@
  *
  * @version 1.0
  */
-
 namespace Gpupo\Bundle\MarkethubBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;

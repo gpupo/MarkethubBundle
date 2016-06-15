@@ -10,7 +10,6 @@
  *
  * @version 1.0
  */
-
 namespace Gpupo\Bundle\MarkethubBundle\Factory;
 
 use Gpupo\CnovaSdk\Factory;
