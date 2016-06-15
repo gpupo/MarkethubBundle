@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="markethub.zattini.factory.class">Gpupo\Bundle\MarkethubBundle\Factory\ZattiniFactory</parameter>
+        <parameter key="markethub.zattini.client.class">Gpupo\ZattiniSdk\Client\Client</parameter>
+        <parameter key="markethub.zattini.product.manager.class">Gpupo\ZattiniSdk\Entity\Product\Manager</parameter>
+        <parameter key="markethub.zattini.order.manager.class">Gpupo\ZattiniSdk\Entity\Order\Manager</parameter>
+        <parameter key="markethub.zattini" type="collection">
+            <parameter key="client_id" type="string"/>
+            <parameter key="access_token" type="string"/>
+            <parameter key="api_version" type="string">sandbox</parameter>
+            <parameter key="verbose" type="string">false</parameter>
+            <parameter key="register_path" type="string"/>
+            <parameter key="ssl_version" type="string">SecureTransport</parameter>
+            <parameter key="ssl_verify_peer" type="string">true</parameter>
+        </parameter>
+    </parameters>
+   <services>
+        <service id="markethub.zattini.factory" class="%markethub.zattini.factory.class%">
+            <argument>%markethub.zattini%</argument>
+            <argument type="service" id="logger" on-invalid="ignore"></argument>
+        </service>
+        <service id="markethub.zattini.client" class="%markethub.zattini.client.class%">
+            <factory service="markethub.zattini.factory" method="getClient" />
+        </service>
+        <service id="markethub.zattini.product.manager" class="%markethub.zattini.product.manager.class%">
+            <factory service="markethub.zattini.factory" method="factoryManager" />
+            <argument>%markethub.zattini.product.manager.class%</argument>
+        </service>
+        <service id="markethub.zattini.order.manager" class="%markethub.zattini.order.manager.class%">
+            <factory service="markethub.zattini.factory" method="factoryManager" />
+            <argument>%markethub.zattini.order.manager.class%</argument>
+        </service>
+    </services>
+</container>

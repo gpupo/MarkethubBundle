@@ -31,7 +31,7 @@ $finder = DefaultFinder::create()
 
 return Config::create()
     ->fixers(array(
-        '-yoda_conditions',
+        'yoda_conditions',
         'align_double_arrow',
         'header_comment',
         'multiline_spaces_before_semicolon',

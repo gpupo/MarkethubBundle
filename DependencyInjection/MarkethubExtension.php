@@ -23,7 +23,7 @@ class MarkethubExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        foreach (['submarino', 'cnova'] as $sdk) {
+        foreach (['submarino', 'cnova', 'zattini'] as $sdk) {
             $loader->load($sdk.'-sdk.xml');
         }
 
