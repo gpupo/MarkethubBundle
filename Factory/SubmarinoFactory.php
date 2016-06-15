@@ -10,7 +10,6 @@
  *
  * @version 1.0
  */
-
 namespace Gpupo\Bundle\MarkethubBundle\Factory;
 
 use Gpupo\SubmarinoSdk\Factory;
@@ -20,8 +19,8 @@ class SubmarinoFactory extends Factory
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [
-            'token'     => $this->config['api_token'],
-            'version'   => $this->config['api_version'],
+            'token'   => $this->config['api_token'],
+            'version' => $this->config['api_version'],
         ];
 
         return parent::setClient($clientOptions);
