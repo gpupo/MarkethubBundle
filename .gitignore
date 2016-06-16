@@ -4,3 +4,4 @@
 /.idea/
 Resources/logs/*
 *.phar
+*.lock
