@@ -1,7 +1,7 @@
 {
     "name": "gpupo/markethub-bundle",
     "description": "Integração de SDKs para Marketplaces com Symfony2",
-    "keywords": ["Marketplace", "B2W", "Cnova","Zattini", "SF2", "SDK"],
+    "keywords": ["Marketplace", "B2W", "Cnova", "Zattini", "SF2", "SDK"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -13,9 +13,9 @@
         "symfony/http-kernel": "~2.3",
         "symfony/dependency-injection": "~2.3",
         "symfony/config": "~2.3",
-        "gpupo/submarino-sdk": "~2.2",
-        "gpupo/cnova-sdk": "~1.0.4",
-        "gpupo/zattini-sdk": "~1.0.0"
+        "gpupo/submarino-sdk": "~2.3",
+        "gpupo/cnova-sdk": "~1.2",
+        "gpupo/zattini-sdk": "~1"
 
     },
     "require-dev": {
