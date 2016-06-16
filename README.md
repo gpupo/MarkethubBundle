@@ -9,13 +9,13 @@
 
 - B2W
 - Cnova
-
+- Zattini
 
 ## Instalação
 
 Usando [Composer](http://getcomposer.com):
 
-    composer require gpupo/markethub-bundle:~1.0
+    composer require gpupo/markethub-bundle:~1.3
 
 Registre o bundle no Kernel:
 
