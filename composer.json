@@ -9,10 +9,10 @@
         }
     },
     "require": {
-        "php": ">=5.5.9",
-        "symfony/http-kernel": "~2.3",
-        "symfony/dependency-injection": "~2.3",
-        "symfony/config": "~2.3",
+        "php": ">=5.6",
+        "symfony/http-kernel": "~2.7|~3.0",
+        "symfony/dependency-injection": "~2.7|~3.0",
+        "symfony/config": "~2.7|~3.0",
         "gpupo/submarino-sdk": "~2.3",
         "gpupo/cnova-sdk": "~1.2",
         "gpupo/zattini-sdk": "~1"
@@ -21,6 +21,12 @@
     "require-dev": {
         "phpunit/phpunit": "~4.0",
         "symfony/monolog-bundle": "~2.7@dev"
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "mkdir -p Resources/logs",
+            "touch Resources/logs/tests.log"
+        ]
     },
     "minimum-stability" : "stable"
 }
