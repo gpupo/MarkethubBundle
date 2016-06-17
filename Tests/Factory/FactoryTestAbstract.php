@@ -39,7 +39,12 @@ abstract class FactoryTestAbstract extends CommonTest
      */
     public function testAcessoAServicosDeSdk($objectExpected, $serviceId)
     {
-        $this->assertInstanceOf($objectExpected, $this->container->get($serviceId));
+        if (null === $objectExpected) {
+            return $this->markTestIncomplete();
+        }
+
+        $object =  $this->container->get($serviceId);
+        $this->assertInstanceOf($objectExpected, $object);
     }
 
     abstract public function dataProviderServices();

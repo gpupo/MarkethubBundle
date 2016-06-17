@@ -19,13 +19,13 @@ class ZattiniFactory extends Factory
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [
-            'client_id'     => $this->config['client_id'],
-            'access_token'  => $this->config['access_token'],
-            'version'       => $this->config['api_version'],
-            'verbose'       => $this->config['verbose'],
-            'sslVersion'    => $this->config['ssl_version'],
-            'sslVerifyPeer' => $this->config['ssl_verify_peer'],
-            'registerPath'  => $this->config['register_path'],
+            'client_id'     => $this->options['client_id'],
+            'access_token'  => $this->options['access_token'],
+            'version'       => $this->options['api_version'],
+            'verbose'       => $this->options['verbose'],
+            'sslVersion'    => $this->options['ssl_version'],
+            'sslVerifyPeer' => $this->options['ssl_verify_peer'],
+            'registerPath'  => $this->options['register_path'],
         ];
 
         return parent::setClient($clientOptions);
