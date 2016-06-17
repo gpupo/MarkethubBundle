@@ -63,11 +63,6 @@ markethub:
         api_version: 'api'
 ```
 
-## Market places disponíveis:
-
-- submarino
-- cnova
-
 ## Serviços disponíveis:
 
 (considere ``%nome_marketplace%`` como valor a ser preenchido)
