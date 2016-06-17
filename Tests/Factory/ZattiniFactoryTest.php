@@ -19,18 +19,14 @@ class ZattiniFactoryTest extends FactoryTestAbstract
     public function dataProviderServices()
     {
         return [
-            ['\Gpupo\Bundle\MarkethubBundle\Factory\ZattiniFactory', 'markethub.zattini.factory'],
-            ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.zattini.client'],
-            ['\Gpupo\ZattiniSdk\Entity\Product\Manager', 'markethub.zattini.product.manager'],
-            ['\Gpupo\ZattiniSdk\Entity\Order\Manager', 'markethub.zattini.order.manager'],
+            [null, null],
         ];
     }
 
     public function dataProviderObjetos()
     {
         return [
-            ['\Gpupo\ZattiniSdk\Entity\Product\Product', 'product', null],
-            ['\Gpupo\ZattiniSdk\Entity\Order\Order', 'order', null],
+            [null, null, null],
         ];
     }
 }

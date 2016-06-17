@@ -19,8 +19,8 @@ class SubmarinoFactory extends Factory
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [
-            'token'   => $this->config['api_token'],
-            'version' => $this->config['api_version'],
+            'token'   => $this->options['api_token'],
+            'version' => $this->options['api_version'],
         ];
 
         return parent::setClient($clientOptions);
