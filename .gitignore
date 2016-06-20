@@ -1,7 +1,4 @@
-*.swp
 /vendor/
-/nbproject/
-/.idea/
 Resources/logs/*
 *.phar
 *.lock
