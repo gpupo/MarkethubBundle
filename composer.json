@@ -1,6 +1,6 @@
 {
     "name": "gpupo/markethub-bundle",
-    "description": "Integração de SDKs para Marketplaces com Symfony2",
+    "description": "Integração de SDKs para Marketplaces com aplicações Symfony",
     "keywords": ["Marketplace", "B2W", "Cnova", "Zattini", "SF2", "SDK"],
     "license": "MIT",
     "autoload": {
