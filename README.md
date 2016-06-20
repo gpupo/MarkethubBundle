@@ -105,7 +105,7 @@ services no escopo onde Container está presente.
 
 ### Exemplos de manutenção de Produtos
 
-```PHP
+```php
 <?php
 ///...
 
