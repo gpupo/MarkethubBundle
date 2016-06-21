@@ -13,7 +13,7 @@ gpupo/cnova-sdk                    1.3.0              SDK Não Oficial para inte
 gpupo/common                       1.6.0              Common Objects
 gpupo/common-sdk                   2.0.4              Componente de uso comum entre SDKs para integração a partir de aplicações PHP com Restful webservices
 gpupo/submarino-sdk                2.4.0              SDK Não Oficial para integração a partir de aplicações PHP com as APIs do Submarino Marketplace
-gpupo/zattini-sdk                  1.0.1              SDK Não Oficial para integração a partir de aplicações PHP com as APIs da Zattini Marketplace
+gpupo/netshoes-sdk                  1.0.1              SDK Não Oficial para integração a partir de aplicações PHP com as APIs da Netshoes Marketplace
 guzzle/guzzle                      v3.8.1             Guzzle is a PHP HTTP client library and framework for building RESTful web service clients
 monolog/monolog                    1.19.0             Sends your logs to files, sockets, inboxes, databases and various web services
 myclabs/deep-copy                  1.5.1              Create deep copies (clones) of your objects
