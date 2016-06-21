@@ -524,7 +524,7 @@ gpupo/cnova-sdk 1.3.0 SDK Não Oficial para integração a partir de aplicaçõe
 |  `--twig/twig *
 |     `--php >=5.2.7
 `--php ^5.6 || ^7.0
-gpupo/zattini-sdk 1.0.1 SDK Não Oficial para integração a partir de aplicações PHP com as APIs da Zattini Marketplace
+gpupo/netshoes-sdk 1.0.1 SDK Não Oficial para integração a partir de aplicações PHP com as APIs da Netshoes Marketplace
 |--ext-curl *
 |--gpupo/common-sdk ~2
 |  |--codeclimate/php-test-reporter @dev

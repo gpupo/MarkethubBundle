@@ -1,7 +1,7 @@
 {
     "name": "gpupo/markethub-bundle",
     "description": "Integração de SDKs para Marketplaces com aplicações Symfony",
-    "keywords": ["Marketplace", "B2W", "Cnova", "Zattini", "SF2", "SDK"],
+    "keywords": ["Marketplace", "B2W", "Cnova", "Netshoes", "Symfony", "SDK"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -16,7 +16,7 @@
         "gpupo/common-sdk": "*",
         "gpupo/submarino-sdk": "*",
         "gpupo/cnova-sdk": "*",
-        "gpupo/zattini-sdk": "*"
+        "gpupo/netshoes-sdk": "*"
 
     },
     "require-dev": {
@@ -24,10 +24,6 @@
         "symfony/phpunit-bridge": "^3.1"
     },
     "scripts": {
-        "pre-install-cmd": [
-            "mkdir -p Resources/logs",
-            "touch Resources/logs/tests.log"
-        ]
     },
     "minimum-stability": "dev",
     "prefer-stable": true

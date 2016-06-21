@@ -45,7 +45,7 @@ class Configuration implements ConfigurationInterface
                         ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
                     ->end()
                 ->end()
-                ->arrayNode('zattini')
+                ->arrayNode('netshoes')
                     ->children()
                         ->booleanNode('enabled')->defaultFalse()->end()
                         ->scalarNode('client_id')->defaultValue('')->end()

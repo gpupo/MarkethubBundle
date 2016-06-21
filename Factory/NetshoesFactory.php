@@ -12,9 +12,9 @@
  */
 namespace Gpupo\Bundle\MarkethubBundle\Factory;
 
-use Gpupo\ZattiniSdk\Factory;
+use Gpupo\NetshoesSdk\Factory;
 
-class ZattiniFactory extends Factory
+class NetshoesFactory extends Factory
 {
     public function setClient(array $clientOptions = null)
     {

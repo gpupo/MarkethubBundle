@@ -12,9 +12,9 @@
  */
 namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
 
-class ZattiniFactoryTest extends FactoryTestAbstract
+class NetshoesFactoryTest extends FactoryTestAbstract
 {
-    protected $factoryId = 'markethub.zattini.factory';
+    protected $factoryId = 'markethub.netshoes.factory';
 
     public function dataProviderServices()
     {
