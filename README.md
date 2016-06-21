@@ -6,7 +6,7 @@ Integração de SDKs para Marketplaces com aplicações Symfony
 
 - B2W
 - Cnova
-- Netshoes/Netshoes
+- Netshoes
 
 ## Requisitos
 
