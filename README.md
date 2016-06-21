@@ -149,12 +149,12 @@ $this->get('markethub.submarino.product.manager')->save($product);
 
 ```
 
-# Desenvolvimento
+## Desenvolvimento
 
     git clone --depth=1  git@github.com:gpupo/MarkethubBundle.git
 
     cd MarkethubBundle;
 
-    composer install;
+    ant;
 
-    phpunit;
+    
