@@ -16,7 +16,7 @@
         "gpupo/common-sdk": "*",
         "gpupo/submarino-sdk": "*",
         "gpupo/cnova-sdk": "*",
-        "gpupo/netshoes-sdk": "*"
+        "gpupo/netshoes-sdk": "@dev"
 
     },
     "require-dev": {
