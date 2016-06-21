@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="markethub-bundle" default="composer-rebuild">
- <target name="composer-rebuild" depends="clean,composer"/>
+ <target name="composer-rebuild" depends="clean,composer,libraries"/>
  <target name="clean" description="Cleanup build artifacts">
   <delete dir="${basedir}/vendor"/>
   <delete file="${basedir}/composer.lock"/>
  </target>
- <target name="composer" depends="clean" description="Install dependencies with Composer">
+ <target name="composer" description="Install dependencies with Composer">
   <tstamp>
    <format property="thirty.days.ago" pattern="MM/dd/yyyy hh:mm aa" offset="-30" unit="day"/>
   </tstamp>
@@ -20,6 +20,17 @@
    <arg value="composer.phar"/>
    <arg value="install"/>
   </exec>
+ </target>
+ <target name="libraries" depends="composer" description="List dependencies">
+   <echo output="Resources/doc/libraries-list.txt" append="false">#List of dependencies:
+
+</echo>
+   <exec executable="php">
+    <redirector output="Resources/doc/libraries-list.txt" alwayslog="true" append="true"/>
+     <arg value="composer.phar"/>
+     <arg value="show"/>
+     <arg value="-t"/>
+   </exec>
  </target>
  <target name="test" description="Run tests" depends="phpunit"/>
  <target name="phpunit" description="Generate Reports">
