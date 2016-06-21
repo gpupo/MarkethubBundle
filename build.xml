@@ -23,7 +23,7 @@
  </target>
  <target name="libraries" depends="composer" description="List dependencies">
    <echo output="Resources/doc/libraries-list.md" append="false">#List of dependencies:
-
+```
 </echo>
    <exec executable="php">
     <redirector output="Resources/doc/libraries-list.md" alwayslog="true" append="true"/>
@@ -31,7 +31,7 @@
      <arg value="show"/>
    </exec>
    <echo output="Resources/doc/libraries-tree.md" append="false">#Tree of dependencies:
-
+```
 </echo>
    <exec executable="php">
     <redirector output="Resources/doc/libraries-tree.md" alwayslog="true" append="true"/>
