@@ -43,7 +43,7 @@ abstract class FactoryTestAbstract extends CommonTest
             return $this->markTestIncomplete();
         }
 
-        $object =  $this->container->get($serviceId);
+        $object = $this->container->get($serviceId);
         $this->assertInstanceOf($objectExpected, $object);
     }
 
