@@ -41,8 +41,17 @@
   </exec>
   <delete dir="${basedir}/build"/>
  </target>
+ <target name="daily" depends="composer-rebuild" description="Rebuild for new day!">
+  <exec executable="php-cs-fixer">
+    <arg value="fix"/>
+    <arg value="."/>
+  </exec>
+  <exec executable="${basedir}/Resources/doc/build.sh">
+  </exec>
+ </target>
  <target name="libraries" description="List dependencies">
-   <echo output="Resources/doc/libraries-list.md" append="false">#List of dependencies
+   <echo output="Resources/doc/libraries-list.md" append="false">## Lista de dependências (libraries)
+
 ```
 </echo>
    <exec executable="php">
@@ -50,7 +59,11 @@
      <arg value="composer.phar"/>
      <arg value="show"/>
    </exec>
-   <echo output="Resources/doc/libraries-tree.md" append="false">#Tree of dependencies
+   <echo output="Resources/doc/libraries-list.md" append="true">
+```
+---
+</echo>
+   <echo output="Resources/doc/libraries-tree.md" append="false">## Árvore de dependências (libraries)
 ```
 </echo>
    <exec executable="php">
@@ -59,5 +72,9 @@
      <arg value="show"/>
      <arg value="-t"/>
    </exec>
+   <echo output="Resources/doc/libraries-tree.md" append="true">
+```
+---
+</echo>
  </target>
 </project>
