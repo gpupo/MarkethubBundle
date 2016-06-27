@@ -1,5 +1,21 @@
-#Tree of dependencies
+## Árvore de dependências (libraries)
 ```
+gpupo/common 1.6.5 Common Objects
+|--doctrine/common ~2.5.1
+|  |--doctrine/annotations 1.*
+|  |  |--doctrine/lexer 1.*
+|  |  |  `--php >=5.3.2
+|  |  `--php >=5.3.2
+|  |--doctrine/cache 1.*
+|  |  `--php ~5.5|~7.0
+|  |--doctrine/collections 1.*
+|  |  `--php >=5.3.2
+|  |--doctrine/inflector 1.*
+|  |  `--php >=5.3.2
+|  |--doctrine/lexer 1.*
+|  |  `--php >=5.3.2
+|  `--php >=5.3.2
+`--php ^5.6 || ^7.0
 symfony/config v3.1.1 Symfony Config Component
 |--php >=5.5.9
 `--symfony/filesystem ~2.8|~3.0
@@ -349,9 +365,10 @@ gpupo/cnova-sdk 1.3.0 SDK Não Oficial para integração a partir de aplicaçõe
 |  `--twig/twig *
 |     `--php >=5.2.7
 `--php ^5.6 || ^7.0
-gpupo/netshoes-sdk 1.0.0 SDK Não Oficial para integração a partir de aplicações PHP com APIs da Netshoes Marketplace
+gpupo/submarino-sdk 2.4.1 SDK Não Oficial para integração a partir de aplicações PHP com as APIs do Submarino Marketplace
+|--ext-bcmath *
 |--ext-curl *
-|--gpupo/common-sdk ^2.0.11
+|--gpupo/common-sdk ~2
 |  |--codeclimate/php-test-reporter @dev
 |  |  |--ext-curl *
 |  |  |--php >=5.3
@@ -523,10 +540,9 @@ gpupo/netshoes-sdk 1.0.0 SDK Não Oficial para integração a partir de aplicaç
 |  `--twig/twig *
 |     `--php >=5.2.7
 `--php ^5.6 || ^7.0
-gpupo/submarino-sdk 2.4.0 SDK Não Oficial para integração a partir de aplicações PHP com as APIs do Submarino Marketplace
-|--ext-bcmath *
+gpupo/netshoes-sdk 1.0.1 SDK Não Oficial para integração a partir de aplicações PHP com APIs da Netshoes Marketplace
 |--ext-curl *
-|--gpupo/common-sdk ~2
+|--gpupo/common-sdk ^2.0.11
 |  |--codeclimate/php-test-reporter @dev
 |  |  |--ext-curl *
 |  |  |--php >=5.3
@@ -742,3 +758,6 @@ symfony/monolog-bundle 2.11.1 Symfony MonologBundle
    `--php >=5.5.9
 symfony/phpunit-bridge v3.1.1 Symfony PHPUnit Bridge
 `--php >=5.3.3
+
+```
+---
