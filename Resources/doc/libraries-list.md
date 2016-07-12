@@ -1,6 +1,8 @@
+
 ## Lista de dependências (libraries)
 
-```
+Name | Version | Description
+-----|---------|------------------------------------------------------
 codeclimate/php-test-reporter      v0.3.2             PHP client for reporting test coverage to Code Climate
 doctrine/annotations               v1.2.7             Docblock Annotations Parser
 doctrine/cache                     v1.6.0             Caching library offering an object-oriented API for many cache backends
@@ -11,7 +13,7 @@ doctrine/instantiator              1.0.5              A small, lightweight utili
 doctrine/lexer                     v1.0.1             Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.
 gpupo/cache                        1.3.0              Caching library that implements PSR-6
 gpupo/cnova-sdk                    1.3.0              SDK Não Oficial para integração a partir de aplicações PHP com as APIs da Cnova Marketplace
-gpupo/common                       1.6.5              Common Objects
+gpupo/common                       1.6.6              Common Objects
 gpupo/common-sdk                   2.0.11             Componente de uso comum entre SDKs para integração a partir de aplicações PHP com Restful webservices
 gpupo/netshoes-sdk                 1.0.1              SDK Não Oficial para integração a partir de aplicações PHP com APIs da Netshoes Marketplace
 gpupo/submarino-sdk                2.4.1              SDK Não Oficial para integração a partir de aplicações PHP com as APIs do Submarino Marketplace
@@ -60,5 +62,4 @@ symfony/yaml                       v3.1.1             Symfony Yaml Component
 twig/twig                          v1.24.1            Twig, the flexible, fast, and secure template language for PHP
 webmozart/assert                   1.0.2              Assertions to validate method input/output with nice error messages.
 
-```
----
+
