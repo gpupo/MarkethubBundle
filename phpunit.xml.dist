@@ -14,7 +14,8 @@
 >
     <testsuites>
         <testsuite name="Main Test Suite">
-            <directory>Tests</directory>
+            <directory>Tests/Factory</directory>
+            <directory>Tests/Traits</directory>
         </testsuite>
     </testsuites>
 
