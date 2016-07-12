@@ -21,14 +21,18 @@ class NetshoesFactoryTest extends FactoryTestAbstract
     public function dataProviderServices()
     {
         return [
-            [null, null],
+            ['\Gpupo\Bundle\MarkethubBundle\Factory\NetshoesFactory', 'markethub.netshoes.factory'],
+            ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.netshoes.client'],
+            ['\Gpupo\NetshoesSdk\Entity\Product\Manager', 'markethub.netshoes.product.manager'],
+            ['\Gpupo\NetshoesSdk\Entity\Order\Manager', 'markethub.netshoes.order.manager'],
         ];
     }
 
     public function dataProviderObjetos()
     {
         return [
-            [null, null, null],
+            ['\Gpupo\NetshoesSdk\Entity\Product\Product', 'product', null],
+            ['\Gpupo\NetshoesSdk\Entity\Order\Order', 'order', null],
         ];
     }
 }
