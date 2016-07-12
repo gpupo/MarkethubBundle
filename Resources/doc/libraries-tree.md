@@ -1,6 +1,6 @@
 ## Árvore de dependências (libraries)
 ```
-gpupo/common 1.6.5 Common Objects
+gpupo/common 1.6.6 Common Objects
 |--doctrine/common ~2.5.1
 |  |--doctrine/annotations 1.*
 |  |  |--doctrine/lexer 1.*
