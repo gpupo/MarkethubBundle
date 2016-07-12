@@ -23,7 +23,7 @@
    <arg value="install"/>
   </exec>
  </target>
- <target name="travis" description="Run tests" depends="composer-rebuild, phpunit,codeclimate"/>
+ <target name="travis" description="Run tests" depends="composer-rebuild,phpunit"/>
  <target name="test" description="Run tests" depends="phpunit"/>
  <target name="phpunit" description="Generate Reports">
   <mkdir dir="${basedir}/var/logs"/>
@@ -49,7 +49,7 @@
  </target>
  <target name="libraries" description="List dependencies">
    <echo output="Resources/doc/libraries-list.md" append="false"><!--libraries-list-->
-## Lista de dependências (libraries)
+## Lista de dependências
 
 Name | Version | Description
 -----|---------|------------------------------------------------------
@@ -91,4 +91,20 @@ Name | Version | Description
          <arg value="build"/>
      </exec>
  </target>
+  <target name="ocular.phar" depends="ocular.check" unless="ocular.file.exists">
+   <get src="http://scrutinizer-ci.com/ocular.phar" dest="${basedir}/ocular.phar" skipexisting="false"/>
+  </target>
+  <target name="ocular.check">
+   <condition property="ocular.file.exists">
+     <available file="${basedir}/ocular.phar" type="file" />
+   </condition>
+  </target>
+  <target name="ocular" depends="ocular.phar" description="upload report">
+     <exec executable="php">
+         <arg value="${basedir}/ocular.phar"/>
+         <arg value="code-coverage:upload"/>
+         <arg value="--format=php-clover"/>
+         <arg value="build/logs/coverage.serialized"/>
+     </exec>
+  </target>
 </project>

@@ -17,5 +17,8 @@ branches:
     - /^dev.*$/
     - /^topic.*$/
 script: ant travis
+after_success:
+    - ant codeclimate
+    - ant ocular
 notifications:
   email: false
