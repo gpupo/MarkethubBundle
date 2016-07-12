@@ -13,47 +13,9 @@ Integração de SDKs para Marketplaces com aplicações Symfony
 
 
 
-## Requisitos para uso
-
-* PHP >= *5.6*
-* [curl extension](http://php.net/manual/en/intro.curl.php)
-* [Composer Dependency Manager](http://getcomposer.org)
-
-Este componente **não é uma aplicação Stand Alone** e seu objetivo é ser utilizado como biblioteca.
-Sua implantação deve ser feita por desenvolvedores experientes.
-
-**Isto não é um Plugin!**
-
-As opções que funcionam no modo de comando apenas servem para depuração em modo de
-desenvolvimento.
-
-A documentação mais importante está nos testes unitários. Se você não consegue ler os testes unitários, eu recomendo que não utilize esta biblioteca.
 
 
 
-## Direitos autorais e de licença
-
-Este componente está sob a [licença MIT](https://github.com/gpupo/common-sdk/blob/master/LICENSE)
-
-Para a informação dos direitos autorais e de licença você deve ler o arquivo
-de [licença](https://github.com/gpupo/common-sdk/blob/master/LICENSE) que é distribuído com este código-fonte.
-
-### Resumo da licença
-
-Exigido:
-
-- Aviso de licença e direitos autorais
-
-Permitido:
-
-- Uso comercial
-- Modificação
-- Distribuição
-- Sublicenciamento
-
-Proibido:
-
-- Responsabilidade Assegurada
 
 
 
@@ -150,53 +112,6 @@ markethub:
 
 
 
-## Uso
-
-```php
-<?php
-///...
-    $this->get('markethub.%nome_marketplace%.factory')->createProduct($data);
-```
-
-### Exemplo de uso: B2W Marketplace
-
-É utilizando gpupo/submarino-sdk, com a diferença da disponibilidade de
-services no escopo onde Container está presente.
-
-### Exemplos de manutenção de Produtos
-
-```php
-<?php
-///...
-
-// Acesso a lista de produtos cadastrados, utilizando SF2 service:
-$produtosCadastrados = $this->get('markethub.submarino.order.manager')->fetch(); // Collection de Objetos Product
-
-// Acesso a informações de um produto cadastrado e com identificador conhecido:
-$produto = $this->get('markethub.submarino.product.manager')->findById(9)); // Objeto Produto
-
-echo $product->getName(); // Acesso ao nome do produto #9
-
-
-
-// Criação de um produto:
-$data = [];
-$product = $this->get('markethub.submarino.factory')->createProduct($data);
-
-foreach ($data['sku'] as $item) {
-    $sku = $this->get('markethub.submarino.factory')->createSku($item);
-    $product->getSku()->add($sku);
-}
-
-$this->get('markethub.submarino.product.manager')->save($product);
-
-//Adicionando SKU ao produto:
-$skuData = [];
-$novoSku = $this->get('markethub.submarino.factory')->createSku($skuData);
-$product->getSku()->add($novoSku);
-$this->get('markethub.submarino.product.manager')->save($product);
-
-```
 
 
 
@@ -204,11 +119,6 @@ $this->get('markethub.submarino.product.manager')->save($product);
 
 
 
-
-
-
-* [Github Repository](https://github.com/gpupo/MarkethubBundle/);
-* [Bitbucket Repository](https://bitbucket.org/gpupo/MarkethubBundle/);
 
 
 
@@ -235,10 +145,6 @@ Personalize os parâmetros!
 
 
 
-
----
-
-## Propriedades dos objetos
 
 
 
