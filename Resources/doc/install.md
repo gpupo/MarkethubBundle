@@ -40,6 +40,7 @@ app/config/config_dev.yml:
 markethub:
     submarino:
         api_token: 'MySandbox@ApiToken'
+        register_path: var/logs/
 ```
 
 app/config/config_prod.yml:
@@ -48,8 +49,12 @@ app/config/config_prod.yml:
 markethub:
     submarino:
         api_token: %markethub_submarino_api_token%
-        api_version: 'api'
+        api_version: api
+
 ```
+
+``register_path`` indica o diretório para logs de requisições RestFull
+
 
 ## Serviços disponíveis
 
