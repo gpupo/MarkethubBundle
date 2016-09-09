@@ -23,6 +23,7 @@
    <arg value="install"/>
   </exec>
  </target>
+ <target name="ship" description="Tests, report, documentation" depends="phpunit,codeclimate,ocular,rev"/>
  <target name="travis" description="Run tests" depends="composer-rebuild,phpunit"/>
  <target name="test" description="Run tests" depends="phpunit"/>
  <target name="phpunit" description="Generate Reports">
@@ -92,7 +93,7 @@ Name | Version | Description
      </exec>
  </target>
   <target name="ocular.phar" depends="ocular.check" unless="ocular.file.exists">
-   <get src="http://scrutinizer-ci.com/ocular.phar" dest="${basedir}/ocular.phar" skipexisting="false"/>
+   <get src="https://scrutinizer-ci.com/ocular.phar" dest="${basedir}/ocular.phar" skipexisting="false"/>
   </target>
   <target name="ocular.check">
    <condition property="ocular.file.exists">
@@ -104,7 +105,7 @@ Name | Version | Description
          <arg value="${basedir}/ocular.phar"/>
          <arg value="code-coverage:upload"/>
          <arg value="--format=php-clover"/>
-         <arg value="build/logs/coverage.serialized"/>
+         <arg value="build/logs/clover.xml"/>
      </exec>
   </target>
 </project>
