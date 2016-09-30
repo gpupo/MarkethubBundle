@@ -26,6 +26,7 @@ class Configuration implements ConfigurationInterface
             ->root('markethub')
             ->children()
                 ->booleanNode('enabled')->defaultTrue()->end()
+                //submarino-sdk eof
                 ->arrayNode('submarino')
                     ->children()
                         ->booleanNode('enabled')->defaultFalse()->end()
@@ -35,6 +36,8 @@ class Configuration implements ConfigurationInterface
                         ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
                     ->end()
                 ->end()
+                //submarino-sdk eof
+                //cnova-sdk
                 ->arrayNode('cnova')
                     ->children()
                         ->booleanNode('enabled')->defaultFalse()->end()
@@ -47,6 +50,8 @@ class Configuration implements ConfigurationInterface
                         ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
                     ->end()
                 ->end()
+                //cnova-sdk eof
+                //netshoes-sdk
                 ->arrayNode('netshoes')
                     ->children()
                         ->booleanNode('enabled')->defaultFalse()->end()
@@ -59,6 +64,34 @@ class Configuration implements ConfigurationInterface
                         ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
                     ->end()
                 ->end()
+                //netshoes-sdk eof
+                //mercadolivre-sdk
+                ->arrayNode('mercadolivre')
+                    ->children()
+                        ->booleanNode('enabled')->defaultFalse()->end()
+                        ->scalarNode('client_id')->defaultValue('')->end()
+                        ->scalarNode('access_token')->defaultValue('')->end()
+                        ->scalarNode('api_version')->defaultValue('sandbox')->end()
+                        ->booleanNode('verbose')->defaultFalse()->end()
+                        ->scalarNode('register_path')->defaultValue('')->end()
+                        ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
+                        ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
+                    ->end()
+                ->end()
+                //mercadolivre-sdk eof
+                //brandlovers-sdk
+                ->arrayNode('brandlovers')
+                    ->children()
+                        ->booleanNode('enabled')->defaultFalse()->end()
+                        ->scalarNode('authorization')->defaultValue('')->end()
+                        ->scalarNode('api_version')->defaultValue('sandbox')->end()
+                        ->booleanNode('verbose')->defaultFalse()->end()
+                        ->scalarNode('register_path')->defaultValue('')->end()
+                        ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
+                        ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
+                    ->end()
+                ->end()
+                //brandlovers-sdk eof
             ->end();
 
         return $treeBuilder;
