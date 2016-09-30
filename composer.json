@@ -1,7 +1,7 @@
 {
     "name": "gpupo/markethub-bundle",
-    "description": "Integração de SDKs para Marketplaces com aplicações Symfony",
-    "keywords": ["Marketplace", "B2W", "Cnova", "Netshoes", "Symfony", "SDK"],
+    "description": "Integração de SDKs para Marketplaces Brasileiros",
+    "keywords": ["Marketplace", "B2W", "Cnova", "Netshoes", "Mercadolivre", "Brandlovers", "Symfony", "SDK"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -17,8 +17,9 @@
         "gpupo/common-sdk": "^2.0.11",
         "gpupo/submarino-sdk": "^2.0",
         "gpupo/cnova-sdk": "^1.3",
-        "gpupo/netshoes-sdk": "^1.0.0"
-
+        "gpupo/netshoes-sdk": "^1.0.0",
+        "gpupo/mercadolivre-sdk": "^1.0.1",
+        "gpupo/brandlovers-sdk": "^1.0.0"
     },
     "require-dev": {
         "symfony/monolog-bundle": "~2.7@dev",

@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="markethub.brandlovers.factory.class">Gpupo\Bundle\MarkethubBundle\Factory\BrandloversFactory</parameter>
+        <parameter key="markethub.brandlovers.client.class">Gpupo\BrandloversSdk\Client\Client</parameter>
+        <parameter key="markethub.brandlovers.product.manager.class">Gpupo\BrandloversSdk\Entity\Product\Manager</parameter>
+        <parameter key="markethub.brandlovers.order.manager.class">Gpupo\BrandloversSdk\Entity\Order\Manager</parameter>
+        <parameter key="markethub.brandlovers" type="collection">            
+            <parameter key="authorization" type="string"/>
+            <parameter key="api_version" type="string">sandbox</parameter>
+            <parameter key="verbose" type="string">false</parameter>
+            <parameter key="register_path" type="string"/>
+            <parameter key="ssl_version" type="string">SecureTransport</parameter>
+            <parameter key="ssl_verify_peer" type="string">true</parameter>
+        </parameter>
+    </parameters>
+   <services>
+        <service id="markethub.brandlovers.factory" class="%markethub.brandlovers.factory.class%">
+            <argument>%markethub.brandlovers%</argument>
+            <argument type="service" id="logger" on-invalid="ignore"></argument>
+        </service>
+        <service id="markethub.brandlovers.client" class="%markethub.brandlovers.client.class%">
+            <factory service="markethub.brandlovers.factory" method="getClient" />
+        </service>
+        <service id="markethub.brandlovers.product.manager" class="%markethub.brandlovers.product.manager.class%">
+            <factory service="markethub.brandlovers.factory" method="factoryManager" />
+            <argument>%markethub.brandlovers.product.manager.class%</argument>
+        </service>
+        <service id="markethub.brandlovers.order.manager" class="%markethub.brandlovers.order.manager.class%">
+            <factory service="markethub.brandlovers.factory" method="factoryManager" />
+            <argument>%markethub.brandlovers.order.manager.class%</argument>
+        </service>
+    </services>
+</container>
