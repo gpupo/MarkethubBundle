@@ -10,7 +10,8 @@ Integração de SDKs para Marketplaces com aplicações Symfony
 - B2W
 - Cnova
 - Netshoes
-
+- Mercado Livre
+- Brandlovers
 
 
 
@@ -152,22 +153,22 @@ Gpupo\Bundle\MarkethubBundle\Tests\Factory\CnovaFactory
 
 
 - [x] Falha ao acessar factory inexistente
-- [x] Acesso a servicos de sdk 
-- [x] Centraliza criacao de objetos 
+- [x] Acesso a servicos de sdk
+- [x] Centraliza criacao de objetos
 
 Gpupo\Bundle\MarkethubBundle\Tests\Factory\NetshoesFactory
 
 
 - [x] Falha ao acessar factory inexistente
-- [ ] Acesso a servicos de sdk 
-- [ ] Centraliza criacao de objetos 
+- [ ] Acesso a servicos de sdk
+- [ ] Centraliza criacao de objetos
 
 Gpupo\Bundle\MarkethubBundle\Tests\Factory\SubmarinoFactory
 
 
 - [x] Falha ao acessar factory inexistente
-- [x] Acesso a servicos de sdk 
-- [x] Centraliza criacao de objetos 
+- [x] Acesso a servicos de sdk
+- [x] Centraliza criacao de objetos
 
 
 
@@ -196,7 +197,7 @@ monolog/monolog | 1.19.0 | Sends your logs to files, sockets, inboxes, databases
 myclabs/deep-copy | 1.5.1 | Create deep copies (clones) of your objects
 phpdocumentor/reflection-common | 1.0 | Common reflection classes used by phpdocumentor to reflect the code structure
 phpdocumentor/reflection-docblock | 3.1.0 | With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.
-phpdocumentor/type-resolver | 0.2 | 
+phpdocumentor/type-resolver | 0.2 |
 phpspec/prophecy | v1.6.1 | Highly opinionated mocking framework for PHP 5.3+
 phpunit/php-code-coverage | 4.0.0 | Library that provides collection, processing, and rendering functionality for PHP code coverage information.
 phpunit/php-file-iterator | 1.4.1 | FilterIterator implementation that filters files based on a list of suffixes.
@@ -235,9 +236,3 @@ symfony/stopwatch | v3.1.1 | Symfony Stopwatch Component
 symfony/yaml | v3.1.1 | Symfony Yaml Component
 twig/twig | v1.24.1 | Twig, the flexible, fast, and secure template language for PHP
 webmozart/assert | 1.0.2 | Assertions to validate method input/output with nice error messages.
-
-
-
-
-
-
