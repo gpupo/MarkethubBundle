@@ -23,17 +23,13 @@ class MercadolivreFactoryTest extends FactoryTestAbstract
         return [
             ['\Gpupo\Bundle\MarkethubBundle\Factory\MercadolivreFactory', 'markethub.mercadolivre.factory'],
             ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.mercadolivre.client'],
-            //['\Gpupo\MercadolivreSdk\Entity\Product\Manager', 'markethub.mercadolivre.product.manager'],
-            //['\Gpupo\MercadolivreSdk\Entity\Order\Manager', 'markethub.mercadolivre.order.manager'],
         ];
     }
 
     public function dataProviderObjetos()
     {
         return [
-            null, null, null,
-            //['\Gpupo\MercadolivreSdk\Entity\Product\Product', 'product', null],
-            //['\Gpupo\MercadolivreSdk\Entity\Order\Order', 'order', null],
+            [null, null, []],
         ];
     }
 

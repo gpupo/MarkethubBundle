@@ -7,3 +7,5 @@ Integração de SDKs para Marketplaces com aplicações Symfony
 - B2W
 - Cnova
 - Netshoes
+- Mercado Livre
+- Brandlovers
