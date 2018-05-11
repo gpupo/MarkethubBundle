@@ -28,7 +28,7 @@ class MarkethubExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
-        foreach (['submarino', 'cnova', 'netshoes', 'mercadolivre', 'brandlovers'] as $sdk) {
+        foreach (['submarino', 'cnova', 'netshoes', 'mercadolivre'] as $sdk) {
             $loader->load($sdk.'-sdk.xml');
         }
 
@@ -39,6 +39,6 @@ class MarkethubExtension extends Extension
 
     public function getConfiguration(array $config, ContainerBuilder $container)
     {
-        return new Configuration($container->getParameter('kernel.debug'));
+        return new Configuration();
     }
 }

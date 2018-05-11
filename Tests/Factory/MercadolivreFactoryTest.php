@@ -22,6 +22,8 @@ namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
  */
 class MercadolivreFactoryTest extends FactoryTestAbstract
 {
+    protected $enabled = true;
+
     protected $factoryId = 'markethub.mercadolivre.factory';
 
     public function dataProviderServices()

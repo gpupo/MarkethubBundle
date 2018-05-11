@@ -14,7 +14,8 @@
         "symfony/dependency-injection": "^4.0",
         "symfony/config": "^4.0",
         "symfony/monolog-bundle": "^3.2",
-        "gpupo/common-sdk": "^3.3"
+        "gpupo/common-sdk": "^3.3",
+        "gpupo/mercadolivre-sdk": "^2.1"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.0"
@@ -22,7 +23,6 @@
     "scripts": {
     },
     "suggest": {
-        "gpupo/mercadolivre-sdk": "Allows to integrate with Mercadolibre",
         "gpupo/submarino-sdk": "Allows to integrate with B2W group",
         "gpupo/cnova-sdk": "Allows to integrate with Via Varejo group",
         "gpupo/netshoes-sdk": "Allows to integrate with Netshoes/Zattini group"

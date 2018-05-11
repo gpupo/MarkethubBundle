@@ -24,7 +24,14 @@ abstract class FactoryTestAbstract extends CommonTest
 {
     use SetupContainerTrait;
 
+    protected $enabled = false;
+
     protected $factoryId;
+
+    protected function isEnabled(): bool
+    {
+        return $this->enabled;
+    }
 
     public function getFactory()
     {
@@ -33,6 +40,10 @@ abstract class FactoryTestAbstract extends CommonTest
 
     public function testFalhaAoAcessarFactoryInexistente()
     {
+        if (true !== $this->isEnabled()) {
+            return $this->markTestIncomplete('Class disabled');
+        }
+
         $this->expectException(\BadMethodCallException::class);
 
         return $this->container->get($this->factoryId)->createDinossauro([]);
@@ -46,12 +57,30 @@ abstract class FactoryTestAbstract extends CommonTest
      */
     public function testAcessoAServicosDeSdk($objectExpected, $serviceId)
     {
+
+        if (false === $this->isEnabled()) {
+            return $this->markTestIncomplete('Class disabled');
+        }
+
         if (null === $objectExpected) {
             return $this->markTestIncomplete();
         }
 
         $object = $this->container->get($serviceId);
         $this->assertInstanceOf($objectExpected, $object);
+    }
+
+    /**
+     * @dataProvider dataProviderObjetos
+     * {@inheritdoc}
+     */
+    public function testCentralizaCriacaoDeObjetos($objectExpected, $name, array $data = null)
+    {
+        if (false === $this->isEnabled()) {
+            return $this->markTestIncomplete('Class disabled');
+        }
+
+        return parent::testCentralizaCriacaoDeObjetos($objectExpected, $name, $data);
     }
 
     abstract public function dataProviderServices();

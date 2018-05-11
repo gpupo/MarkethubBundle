@@ -82,19 +82,7 @@ class Configuration implements ConfigurationInterface
             ->end()
             ->end()
                 //mercadolivre-sdk eof
-                //brandlovers-sdk
-            ->arrayNode('brandlovers')
-            ->children()
-            ->booleanNode('enabled')->defaultFalse()->end()
-            ->scalarNode('authorization')->defaultValue('')->end()
-            ->scalarNode('api_version')->defaultValue('sandbox')->end()
-            ->booleanNode('verbose')->defaultFalse()->end()
-            ->scalarNode('register_path')->defaultValue('')->end()
-            ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
-            ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
-            ->end()
-            ->end()
-                //brandlovers-sdk eof
+
             ->end();
 
         return $treeBuilder;

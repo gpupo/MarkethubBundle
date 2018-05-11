@@ -19,18 +19,18 @@
         </parameter>
     </parameters>
    <services>
-        <service id="markethub.mercadolivre.factory" class="%markethub.mercadolivre.factory.class%">
+        <service id="markethub.mercadolivre.factory" class="%markethub.mercadolivre.factory.class%" public="true">
             <argument>%markethub.mercadolivre%</argument>
             <argument type="service" id="logger" on-invalid="ignore"></argument>
         </service>
-        <service id="markethub.mercadolivre.client" class="%markethub.mercadolivre.client.class%">
+        <service id="markethub.mercadolivre.client" class="%markethub.mercadolivre.client.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="getClient" />
         </service>
-        <service id="markethub.mercadolivre.product.manager" class="%markethub.mercadolivre.product.manager.class%">
+        <service id="markethub.mercadolivre.product.manager" class="%markethub.mercadolivre.product.manager.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="factoryManager" />
             <argument>%markethub.mercadolivre.product.manager.class%</argument>
         </service>
-        <service id="markethub.mercadolivre.order.manager" class="%markethub.mercadolivre.order.manager.class%">
+        <service id="markethub.mercadolivre.order.manager" class="%markethub.mercadolivre.order.manager.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="factoryManager" />
             <argument>%markethub.mercadolivre.order.manager.class%</argument>
         </service>
