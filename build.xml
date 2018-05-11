@@ -29,7 +29,7 @@
  <target name="phpunit" description="Generate Reports">
   <mkdir dir="${basedir}/var/logs"/>
   <touch file="${basedir}/var/logs/test.log"/>
-  <exec executable="${basedir}/vendor/bin/phpunit" outputproperty="log">
+  <exec executable="${basedir}/vendor/bin/simple-phpunit" outputproperty="log">
    </exec>
   <echo message="${log}"/>
   <condition property="onSuccess">
