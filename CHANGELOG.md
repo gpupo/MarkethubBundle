@@ -5,7 +5,7 @@ VERSION 2  REQUIRE PHP 7
    Version 2.0 - Require PHP 7
       11/05/2018 18:36  2.0.1  Namspace Refactory
          7351c36 Refactory namspaces
-      11/05/2018 17:09  2.0.0  initial release
+      11/05/2018 17:09  2.0.0  Next generation SDKs
          ae107cf Update Scrutinizer
          0f9e4e0 Make services public to test
          e7ebb11 Update travis config

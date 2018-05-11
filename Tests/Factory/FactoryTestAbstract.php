@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace Gpupo\Tests\MarkethubBundle\Factory;
 
-use Gpupo\Tests\MarkethubBundle\Traits\SetupContainerTrait;
 use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
+use Gpupo\Tests\MarkethubBundle\Traits\SetupContainerTrait;
 
 abstract class FactoryTestAbstract extends CommonTest
 {
