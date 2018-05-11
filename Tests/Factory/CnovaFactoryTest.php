@@ -21,7 +21,7 @@ namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
  * @coversNothing
  */
 class CnovaFactoryTest extends FactoryTestAbstract
-{    
+{
     protected $factoryId = 'markethub.cnova.factory';
 
     public function dataProviderServices()

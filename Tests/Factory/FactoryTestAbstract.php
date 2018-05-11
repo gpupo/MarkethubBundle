@@ -28,11 +28,6 @@ abstract class FactoryTestAbstract extends CommonTest
 
     protected $factoryId;
 
-    protected function isEnabled(): bool
-    {
-        return $this->enabled;
-    }
-
     public function getFactory()
     {
         return $this->container->get($this->factoryId);
@@ -57,7 +52,6 @@ abstract class FactoryTestAbstract extends CommonTest
      */
     public function testAcessoAServicosDeSdk($objectExpected, $serviceId)
     {
-
         if (false === $this->isEnabled()) {
             return $this->markTestIncomplete('Class disabled');
         }
@@ -84,4 +78,9 @@ abstract class FactoryTestAbstract extends CommonTest
     }
 
     abstract public function dataProviderServices();
+
+    protected function isEnabled(): bool
+    {
+        return $this->enabled;
+    }
 }
