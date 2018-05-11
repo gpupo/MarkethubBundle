@@ -1,0 +1,84 @@
+
+VERSION 2  REQUIRE PHP 7
+========================
+
+   Version 2.0 - Require PHP 7
+      11/05/2018 17:09  2.0.0  initial release
+         ae107cf Update Scrutinizer
+         0f9e4e0 Make services public to test
+         e7ebb11 Update travis config
+         fe70d2c Apply CS rules
+         773356a Update CS config
+         4d78fe7 Upgrade Symfony
+         8b7ed78 fix dataprovider
+         35e48eb Adicionado SDKs Mercado Livre e Brandlovers
+         92ec292 config
+         0fc452b doc
+         2af2568 Testes para Objetos Netshoes
+         a584d25 config
+         c757037 main suite+
+         4fab05c phpunit whitelist
+         6107cc0 md files
+         b8a8a5b Header
+         7c7bf0b Build files
+         48b51fe doc files
+         732748c +doc
+         0fa8b97 versions
+         9ebb363 netshoes-sdk version
+         f65f77a desc
+         b2a5c7a rename
+         a0d8d18 rename
+         379ad5d format
+         fe91559 libraries-list.md
+         a575642 libraries-list.txt
+         a8cc915 doc
+         37e85ff README
+         8fe7183 doc
+         b34f941 description
+         3674012 require
+         3369ef3 -InvalidConfigurationException
+         50d7ece doc
+         b1c6343 fixes
+         8d466f9 doc
+         e0f00cf Readme
+         0652454 common upgrade
+         8bc06cc versions
+         af51647 sdk versions
+         4b4bf6d Sf3 support
+         ca54fe4 upgrade
+         72c41a4 build
+         7e8b7ac -lock, add zattini-sdk
+         7ebe805 Zattini
+         3ba808c Editor config
+         3eeebe5 composer update:
+         1e82e2d composer update: Security Misconfiguration Vulnerability FIX
+         8705d56 composer update [routine]
+         e523458 composer update
+         8139ca1 Cs fix
+         7723ee6 factoryId
+         9e674b3 CS fix
+         40ce039 composer update
+         97a32e6 ssl_verify_peer
+         099fa69 composer update
+         135f43d cnova-sdk update
+         ba562e5 Cs fix
+         bdb19f7 Cnova Factory
+         96cb12c Adicionado cnova-sdk
+         ac91da2 composer update
+         9372ef9 \Gpupo\CommonSdk\Client\ update namespace
+         0db3c56 Composer remove alias
+         2b56e50 composer update
+         61fe67a fix factory
+         793db83 require php >=5.5.9
+         57ad0d5 Doc
+         eead101 Composer stable
+         66a3c65 Factory/SubmarinoFactory
+         5122f6b CS fix
+         e72a6b9 Doc fix
+         731b0ab Construtores
+         91c148b Submarino services, tests OK (5 tests, 5 assertions)
+         2caaba0 composer update
+         0d9e0af composer update
+         8418ac1 DI Configuration
+         2e0152c config files
+         c3617a2 Init
