@@ -1,7 +1,7 @@
 {
     "name": "gpupo/markethub-bundle",
     "description": "Integração de SDKs para Marketplaces Brasileiros",
-    "keywords": ["Marketplace", "B2W", "Cnova", "Netshoes", "Mercadolivre", "Brandlovers", "Symfony", "SDK"],
+    "keywords": ["Marketplace", "B2W", "Via Varejo", "Cnova", "Netshoes", "Mercadolivre", "Symfony", "SDK"],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -9,23 +9,23 @@
         }
     },
     "require": {
-        "php": "^5.6 || ^7.0",
-        "symfony/http-kernel": "~3.0",
-        "symfony/dependency-injection": "~3.0",
-        "symfony/config": "~3.0",
-        "gpupo/common": "^1.6.4 ",
-        "gpupo/common-sdk": "^2.0.11",
-        "gpupo/submarino-sdk": "^2.0",
-        "gpupo/cnova-sdk": "^1.3",
-        "gpupo/netshoes-sdk": "^1.0.0",
-        "gpupo/mercadolivre-sdk": "^1.0.1",
-        "gpupo/brandlovers-sdk": "^1.0.0"
+        "php": "^7.1.3",
+        "symfony/http-kernel": "^4.0",
+        "symfony/dependency-injection": "^4.0",
+        "symfony/config": "^4.0",
+        "symfony/monolog-bundle": "^3.2",
+        "gpupo/common-sdk": "^3.3"
     },
     "require-dev": {
-        "symfony/monolog-bundle": "~2.7@dev",
-        "symfony/phpunit-bridge": "^3.1"
+        "symfony/phpunit-bridge": "^4.0"
     },
     "scripts": {
+    },
+    "suggest": {
+        "gpupo/mercadolivre-sdk": "Allows to integrate with Mercadolibre",
+        "gpupo/submarino-sdk": "Allows to integrate with B2W group",
+        "gpupo/cnova-sdk": "Allows to integrate with Via Varejo group",
+        "gpupo/netshoes-sdk": "Allows to integrate with Netshoes/Zattini group"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
