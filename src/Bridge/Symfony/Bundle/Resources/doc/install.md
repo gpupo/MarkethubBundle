@@ -17,7 +17,7 @@ class AppKernel extends Kernel
     {
         return array(
             //...
-            new Gpupo\Bundle\MarkethubBundle\MarkethubBundle(),
+            new Gpupo\MarkethubBundle\MarkethubBundle(),
         );
     }
     // ...

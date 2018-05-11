@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
+namespace Gpupo\Tests\MarkethubBundle\Factory;
 
 /**
  * @coversNothing
@@ -27,7 +27,7 @@ class CnovaFactoryTest extends FactoryTestAbstract
     public function dataProviderServices()
     {
         return [
-            ['\Gpupo\Bundle\MarkethubBundle\Factory\CnovaFactory', 'markethub.cnova.factory'],
+            ['\Gpupo\MarkethubBundle\Factory\CnovaFactory', 'markethub.cnova.factory'],
             ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.cnova.client'],
             ['\Gpupo\CnovaSdk\Entity\Product\Manager', 'markethub.cnova.product.manager'],
             ['\Gpupo\CnovaSdk\Entity\Order\Manager', 'markethub.cnova.order.manager'],

@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
+namespace Gpupo\Tests\MarkethubBundle\Factory;
 
 /**
  * @coversNothing
@@ -27,7 +27,7 @@ class NetshoesFactoryTest extends FactoryTestAbstract
     public function dataProviderServices()
     {
         return [
-            ['\Gpupo\Bundle\MarkethubBundle\Factory\NetshoesFactory', 'markethub.netshoes.factory'],
+            ['\Gpupo\MarkethubBundle\Factory\NetshoesFactory', 'markethub.netshoes.factory'],
             ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.netshoes.client'],
             ['\Gpupo\NetshoesSdk\Entity\Product\Manager', 'markethub.netshoes.product.manager'],
             ['\Gpupo\NetshoesSdk\Entity\Order\Manager', 'markethub.netshoes.order.manager'],

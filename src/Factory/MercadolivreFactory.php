@@ -15,17 +15,22 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Factory;
 
-use Gpupo\SubmarinoSdk\Factory;
+use Gpupo\MercadolivreSdk\Factory;
 
-class SubmarinoFactory extends Factory
+class MercadolivreFactory extends Factory
 {
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [
-            'token' => $this->options['api_token'],
+            'client_id' => $this->options['client_id'],
+            'access_token' => $this->options['access_token'],
             'version' => $this->options['api_version'],
+            'verbose' => $this->options['verbose'],
+            'sslVersion' => $this->options['ssl_version'],
+            'sslVerifyPeer' => $this->options['ssl_verify_peer'],
+            'registerPath' => $this->options['register_path'],
         ];
 
         return parent::setClient($clientOptions);

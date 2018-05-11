@@ -15,9 +15,9 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Tests\Traits;
+namespace Gpupo\Tests\MarkethubBundle\Traits;
 
-use Gpupo\Bundle\MarkethubBundle\DependencyInjection\MarkethubExtension;
+use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection\MarkethubExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 
 trait SetupContainerTrait

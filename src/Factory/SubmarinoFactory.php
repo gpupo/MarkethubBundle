@@ -15,22 +15,17 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Factory;
 
-use Gpupo\NetshoesSdk\Factory;
+use Gpupo\SubmarinoSdk\Factory;
 
-class NetshoesFactory extends Factory
+class SubmarinoFactory extends Factory
 {
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [
-            'client_id' => $this->options['client_id'],
-            'access_token' => $this->options['access_token'],
+            'token' => $this->options['api_token'],
             'version' => $this->options['api_version'],
-            'verbose' => $this->options['verbose'],
-            'sslVersion' => $this->options['ssl_version'],
-            'sslVerifyPeer' => $this->options['ssl_verify_peer'],
-            'registerPath' => $this->options['register_path'],
         ];
 
         return parent::setClient($clientOptions);

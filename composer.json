@@ -5,7 +5,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Gpupo\\Bundle\\MarkethubBundle\\": ""
+            "Gpupo\\MarkethubBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gpupo\\Tests\\MarkethubBundle\\": "tests/"
         }
     },
     "require": {

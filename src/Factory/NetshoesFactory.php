@@ -15,11 +15,11 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Factory;
 
-use Gpupo\MercadolivreSdk\Factory;
+use Gpupo\NetshoesSdk\Factory;
 
-class MercadolivreFactory extends Factory
+class NetshoesFactory extends Factory
 {
     public function setClient(array $clientOptions = null)
     {

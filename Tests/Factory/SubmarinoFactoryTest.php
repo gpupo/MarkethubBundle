@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Tests\Factory;
+namespace Gpupo\Tests\MarkethubBundle\Factory;
 
 /**
  * @coversNothing
@@ -27,7 +27,7 @@ class SubmarinoFactoryTest extends FactoryTestAbstract
     public function dataProviderServices()
     {
         return [
-            ['\Gpupo\Bundle\MarkethubBundle\Factory\SubmarinoFactory', 'markethub.submarino.factory'],
+            ['\Gpupo\MarkethubBundle\Factory\SubmarinoFactory', 'markethub.submarino.factory'],
             ['\Gpupo\CommonSdk\Client\ClientInterface', 'markethub.submarino.client'],
             ['\Gpupo\SubmarinoSdk\Entity\Product\Manager', 'markethub.submarino.product.manager'],
             ['\Gpupo\SubmarinoSdk\Entity\Product\Sku\Manager', 'markethub.submarino.product.sku.manager'],

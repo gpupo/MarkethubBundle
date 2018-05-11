@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Factory;
 
 use Gpupo\CnovaSdk\Factory;
 

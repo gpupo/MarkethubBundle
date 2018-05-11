@@ -15,9 +15,9 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle\Tests;
+namespace Gpupo\Tests\MarkethubBundle;
 
-use Gpupo\Bundle\MarkethubBundle\Tests\Traits\SetupContainerTrait;
+use Gpupo\Tests\MarkethubBundle\Traits\SetupContainerTrait;
 
 abstract class TestCaseAbstract extends \PHPUnit\Framework\TestCase
 {

@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Bundle\MarkethubBundle;
+namespace Gpupo\MarkethubBundle\Bridge\Symfony\Bundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

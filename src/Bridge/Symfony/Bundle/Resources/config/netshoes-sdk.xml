@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="markethub.netshoes.factory.class">Gpupo\Bundle\MarkethubBundle\Factory\NetshoesFactory</parameter>
+        <parameter key="markethub.netshoes.factory.class">Gpupo\MarkethubBundle\Factory\NetshoesFactory</parameter>
         <parameter key="markethub.netshoes.client.class">Gpupo\NetshoesSdk\Client\Client</parameter>
         <parameter key="markethub.netshoes.product.manager.class">Gpupo\NetshoesSdk\Entity\Product\Manager</parameter>
         <parameter key="markethub.netshoes.order.manager.class">Gpupo\NetshoesSdk\Entity\Order\Manager</parameter>

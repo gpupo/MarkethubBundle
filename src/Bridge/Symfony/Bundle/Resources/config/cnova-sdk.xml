@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <parameters>
-        <parameter key="markethub.cnova.factory.class">Gpupo\Bundle\MarkethubBundle\Factory\CnovaFactory</parameter>
+        <parameter key="markethub.cnova.factory.class">Gpupo\MarkethubBundle\Factory\CnovaFactory</parameter>
         <parameter key="markethub.cnova.client.class">Gpupo\CnovaSdk\Client\Client</parameter>
         <parameter key="markethub.cnova.product.manager.class">Gpupo\CnovaSdk\Entity\Product\Manager</parameter>
         <parameter key="markethub.cnova.order.manager.class">Gpupo\CnovaSdk\Entity\Order\Manager</parameter>

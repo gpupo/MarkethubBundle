@@ -14,15 +14,12 @@
 >
     <testsuites>
         <testsuite name="Main Test Suite">
-            <directory>Tests/Factory</directory>
-            <directory>Tests/Traits</directory>
+            <directory>tests/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>Factory/</directory>
-            <directory>Traits/</directory>
         </whitelist>
     </filter>
 
