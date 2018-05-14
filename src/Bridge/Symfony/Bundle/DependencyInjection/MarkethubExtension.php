@@ -28,9 +28,7 @@ class MarkethubExtension extends Extension
     public function load(array $configs, ContainerBuilder $container)
     {
         $configPath = __DIR__.'/../Resources/config';
-
         $loader = new XmlFileLoader($container, new FileLocator($configPath));
-
         $finder = new Finder();
         $finder->files()->name('*.xml')->in($configPath);
         foreach ($finder as $file) {
@@ -38,8 +36,24 @@ class MarkethubExtension extends Extension
         }
 
         $configuration = $this->getConfiguration($configs, $container);
+        $config =  $this->processConfiguration($configuration, $configs);
 
-        return $this->processConfiguration($configuration, $configs);
+
+        if (array_key_exists('mercadolivre', $config)) {
+            $parameters = $config['mercadolivre'];
+        } else {
+            $parameters = $container->getParameter('markethub.mercadolivre');
+        }
+
+        foreach([
+            'Gpupo\MarkethubBundle\Factory\MercadolivreFactory',
+            'Gpupo\MercadolivreSdk\Client\Client',
+        ] as $serviceName) {
+            $definition = $container->getDefinition($serviceName);
+            $definition->replaceArgument(0, $parameters);
+        }
+
+        return $config;
     }
 
     public function getConfiguration(array $config, ContainerBuilder $container)

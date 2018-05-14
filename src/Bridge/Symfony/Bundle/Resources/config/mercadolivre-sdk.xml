@@ -31,19 +31,32 @@
         <!-- Client -->
         <service id="Gpupo\MercadolivreSdk\Client\Client" public="false" >
             <factory service="markethub.mercadolivre.factory" method="getClient" />
+            <argument>%markethub.mercadolivre%</argument>
+            <argument type="service" id="logger" on-invalid="ignore"></argument>
+            <argument type="service" id="cache.app" on-invalid="ignore"></argument>
             <argument type="tagged" tag="markethub.client" />
         </service>
         <service id="markethub.mercadolivre.client" alias="Gpupo\MercadolivreSdk\Client\Client" />
 
+        <!-- Product -->
         <service id="markethub.mercadolivre.product.manager" class="%markethub.mercadolivre.product.manager.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="factoryManager" />
             <argument type="tagged" tag="markethub.product.manager" />
             <argument>%markethub.mercadolivre.product.manager.class%</argument>
         </service>
+
+        <!-- Order -->
         <service id="markethub.mercadolivre.order.manager" class="%markethub.mercadolivre.order.manager.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="factoryManager" />
             <argument>%markethub.mercadolivre.order.manager.class%</argument>
             <argument type="tagged" tag="markethub.order.manager" />
         </service>
+
+        <!-- Command -->
+        <service id="markethub.mercadolivre.auth_command" class="Gpupo\MercadolivreSdk\Console\Command\AuthCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
     </services>
 </container>
