@@ -19,8 +19,10 @@ namespace Gpupo\MarkethubBundle\Factory;
 
 use Gpupo\MercadolivreSdk\Factory;
 
-class MercadolivreFactory extends Factory
+class MercadolivreFactory extends Factory implements FactoryInterface
 {
+    const id = 'markethub.mercadolivre.factory';
+    
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [

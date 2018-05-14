@@ -75,7 +75,7 @@ markethub:
         api_token: 'MySandbox@ApiToken'
 ```
 
-app/config/config_prod.yml:
+config/packages/markethub.yaml:
 
 ```yaml
 markethub:

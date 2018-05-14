@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 
 <container xmlns="http://symfony.com/schema/dic/services"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
     <parameters>
-        <parameter key="markethub.mercadolivre.factory.class">Gpupo\MarkethubBundle\Factory\MercadolivreFactory</parameter>
         <parameter key="markethub.mercadolivre.client.class">Gpupo\MercadolivreSdk\Client\Client</parameter>
         <parameter key="markethub.mercadolivre.product.manager.class">Gpupo\MercadolivreSdk\Entity\Product\Manager</parameter>
         <parameter key="markethub.mercadolivre.order.manager.class">Gpupo\MercadolivreSdk\Entity\Order\Manager</parameter>
@@ -19,20 +19,31 @@
         </parameter>
     </parameters>
    <services>
-        <service id="markethub.mercadolivre.factory" class="%markethub.mercadolivre.factory.class%" public="true">
-            <argument>%markethub.mercadolivre%</argument>
-            <argument type="service" id="logger" on-invalid="ignore"></argument>
+
+        <!-- Factory -->
+        <service id="Gpupo\MarkethubBundle\Factory\MercadolivreFactory" public="false" >
+          <argument>%markethub.mercadolivre%</argument>
+          <argument type="service" id="logger" on-invalid="ignore"></argument>
+          <argument type="tagged" tag="markethub.factory" />
         </service>
-        <service id="markethub.mercadolivre.client" class="%markethub.mercadolivre.client.class%" public="true">
+        <service id="markethub.mercadolivre.factory" alias="Gpupo\MarkethubBundle\Factory\MercadolivreFactory" />
+
+        <!-- Client -->
+        <service id="Gpupo\MercadolivreSdk\Client\Client" public="false" >
             <factory service="markethub.mercadolivre.factory" method="getClient" />
+            <argument type="tagged" tag="markethub.client" />
         </service>
+        <service id="markethub.mercadolivre.client" alias="Gpupo\MercadolivreSdk\Client\Client" />
+
         <service id="markethub.mercadolivre.product.manager" class="%markethub.mercadolivre.product.manager.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="factoryManager" />
+            <argument type="tagged" tag="markethub.product.manager" />
             <argument>%markethub.mercadolivre.product.manager.class%</argument>
         </service>
         <service id="markethub.mercadolivre.order.manager" class="%markethub.mercadolivre.order.manager.class%" public="true">
             <factory service="markethub.mercadolivre.factory" method="factoryManager" />
             <argument>%markethub.mercadolivre.order.manager.class%</argument>
+            <argument type="tagged" tag="markethub.order.manager" />
         </service>
     </services>
 </container>

@@ -41,7 +41,13 @@ abstract class FactoryTestAbstract extends CommonTest
 
         $this->expectException(\BadMethodCallException::class);
 
-        return $this->container->get($this->factoryId)->createDinossauro([]);
+
+
+        $service = $this->container->get('test.'.$this->factoryClass);
+
+
+
+        return $service->createDinossauro([]);
     }
 
     /**

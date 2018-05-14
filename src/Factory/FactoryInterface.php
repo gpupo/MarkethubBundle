@@ -15,31 +15,9 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Factory;
 
-use Gpupo\MarkethubBundle\Factory\MercadolivreFactory;
-
-/**
- * @coversNothing
- */
-class MercadolivreFactoryTest extends FactoryTestAbstract
+interface FactoryInterface
 {
-    protected $enabled = true;
-
-    protected $factoryClass = MercadolivreFactory::class;
-    protected $factoryId = 'test.'.MercadolivreFactory::class;
-
-    public function dataProviderServices()
-    {
-        return [
-            [MercadolivreFactory::class, $this->factoryId],
-        ];
-    }
-
-    public function dataProviderObjetos()
-    {
-        return [
-            [null, null, []],
-        ];
-    }
+    public function setClient(array $clientOptions = null);
 }
