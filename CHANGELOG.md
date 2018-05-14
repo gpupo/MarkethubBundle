@@ -1,4 +1,14 @@
 
+VERSION 3  ARCHIEVE OLD SDKS
+============================
+
+   Version 3.0 - Archieve old sdks
+      14/05/2018 13:24  3.0.0  initial release
+         8327867 Archieve old sdks
+         d614fae Make services public on test env
+         43f99fb Update doc
+         08907b9 Fix phpunit path
+
 VERSION 2  REQUIRE PHP 7
 ========================
 
