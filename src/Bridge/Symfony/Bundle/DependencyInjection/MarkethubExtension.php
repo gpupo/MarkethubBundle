@@ -20,16 +20,21 @@ namespace Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class MarkethubExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $configPath = __DIR__.'/../Resources/config';
 
-        foreach (['submarino', 'cnova', 'netshoes', 'mercadolivre'] as $sdk) {
-            $loader->load($sdk.'-sdk.xml');
+        $loader = new XmlFileLoader($container, new FileLocator($configPath));
+
+        $finder = new Finder();
+        $finder->files()->name('*.xml')->in($configPath);
+        foreach ($finder as $file) {
+            $loader->load($file->getRelativePathname());
         }
 
         $configuration = $this->getConfiguration($configs, $container);

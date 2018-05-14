@@ -20,7 +20,8 @@
         "symfony/config": "^4.0",
         "symfony/monolog-bundle": "^3.2",
         "gpupo/common-sdk": "^3.3",
-        "gpupo/mercadolivre-sdk": "^2.1"
+        "gpupo/mercadolivre-sdk": "^2.1",
+        "symfony/finder": "^4.0"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.0"

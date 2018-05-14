@@ -33,12 +33,10 @@ trait SetupContainerTrait
         $this->container->loadFromExtension($this->extension->getAlias());
         $this->container->compile();
 
-
         //Make services public
         foreach ($this->container->getDefinitions() as $id => $definition) {
             $testId = 'test.'.$id;
             $this->container->setAlias($testId, $id);
         }
-
     }
 }

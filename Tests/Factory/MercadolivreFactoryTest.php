@@ -24,8 +24,6 @@ use Gpupo\MarkethubBundle\Factory\MercadolivreFactory;
  */
 class MercadolivreFactoryTest extends FactoryTestAbstract
 {
-    protected $enabled = true;
-
     protected $factoryClass = MercadolivreFactory::class;
     protected $factoryId = 'test.'.MercadolivreFactory::class;
 
@@ -39,7 +37,8 @@ class MercadolivreFactoryTest extends FactoryTestAbstract
     public function dataProviderObjetos()
     {
         return [
-            [null, null, []],
+            ['\Gpupo\MercadolivreSdk\Entity\Product\Product', 'product', null],
+            ['\Gpupo\MercadolivreSdk\Entity\Order\Order', 'order', null],
         ];
     }
 }

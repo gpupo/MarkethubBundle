@@ -18,11 +18,6 @@
         </testsuite>
     </testsuites>
 
-    <filter>
-        <whitelist>
-        </whitelist>
-    </filter>
-
     <!-- Customize your parameters ! -->
     <php>
         <const name="CLIENT_ID" value=""/>
@@ -32,12 +27,7 @@
     </php>
     <logging>
       <log type="coverage-clover" target="build/logs/clover.xml"/>
-      <log type="coverage-php" target="build/logs/coverage.serialized"/>
       <log type="testdox-text" target="build/logs/testdox.txt"/>
       <log type="testdox-html" target="build/logs/testdox.html"/>
-      <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
-      <log type="coverage-text" target=" Resources/doc/coverage.md" showUncoveredFiles="false"/>
-      <log type="coverage-html" target="build/logs/report" title="Coverage"
-        charset="UTF-8" yui="true" highlight="true" lowUpperBound="50" highLowerBound="80" />
     </logging>
 </phpunit>
