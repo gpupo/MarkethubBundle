@@ -18,6 +18,18 @@
         </testsuite>
     </testsuites>
 
+    <filter>
+        <whitelist>
+            <directory>src/</directory>
+            <exclude>
+              <directory>src/Console/</directory>
+              <directory>*.config.php</directory>
+              <directory>*.map.php</directory>
+              <directory>*.template.php</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+
     <!-- Customize your parameters ! -->
     <php>
         <const name="CLIENT_ID" value=""/>

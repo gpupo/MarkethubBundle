@@ -30,6 +30,8 @@
   <mkdir dir="${basedir}/var/logs"/>
   <touch file="${basedir}/var/logs/test.log"/>
   <exec executable="${basedir}/vendor/bin/simple-phpunit" outputproperty="log">
+    <arg value="-c"/>
+    <arg value="phpunit.xml.dist"/>
    </exec>
   <echo message="${log}"/>
   <condition property="onSuccess">
