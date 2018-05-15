@@ -16,6 +16,7 @@
             <parameter key="register_path" type="string"/>
             <parameter key="ssl_version" type="string">SecureTransport</parameter>
             <parameter key="ssl_verify_peer" type="string">true</parameter>
+            <parameter key="app_url" type="string">http://localhost:8000</parameter>
         </parameter>
     </parameters>
    <services>
@@ -27,16 +28,6 @@
           <argument type="tagged" tag="markethub.factory" />
         </service>
         <service id="markethub.mercadolivre.factory" alias="Gpupo\MarkethubBundle\Factory\MercadolivreFactory" />
-
-        <!-- Client -->
-        <service id="Gpupo\MercadolivreSdk\Client\Client" public="false" >
-            <factory service="markethub.mercadolivre.factory" method="getClient" />
-            <argument>%markethub.mercadolivre%</argument>
-            <argument type="service" id="logger" on-invalid="ignore"></argument>
-            <argument type="service" id="cache.app" on-invalid="ignore"></argument>
-            <argument type="tagged" tag="markethub.client" />
-        </service>
-        <service id="markethub.mercadolivre.client" alias="Gpupo\MercadolivreSdk\Client\Client" />
 
         <!-- Product -->
         <service id="markethub.mercadolivre.product.manager" class="%markethub.mercadolivre.product.manager.class%" public="true">
@@ -64,6 +55,17 @@
             <tag name="console.command" />
         </service>
 
+        <!-- Command -->
+        <service id="markethub.mercadolivre.token_command" class="Gpupo\MercadolivreSdk\Console\Command\TokenCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command -->
+        <service id="markethub.mercadolivre.token_command" class="Gpupo\MercadolivreSdk\Console\Command\TokenCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
 
     </services>
 </container>

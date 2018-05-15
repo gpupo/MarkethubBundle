@@ -27,29 +27,27 @@ class MarkethubExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
+        $sdks = [];
         $configPath = __DIR__.'/../Resources/config';
         $loader = new XmlFileLoader($container, new FileLocator($configPath));
         $finder = new Finder();
-        $finder->files()->name('*.xml')->in($configPath);
+        $finder->files()->name('*-sdk.xml')->in($configPath);
         foreach ($finder as $file) {
+            $sdks[] = str_replace('-sdk.xml', '', $file->getRelativePathname());
             $loader->load($file->getRelativePathname());
         }
 
         $configuration = $this->getConfiguration($configs, $container);
-        $config =  $this->processConfiguration($configuration, $configs);
+        $config = $this->processConfiguration($configuration, $configs);
 
+        foreach ($sdks as $sdk) {
+            if (array_key_exists($sdk, $config)) {
+                $parameters = $config[$sdk];
+            } else {
+                $parameters = $container->getParameter(sprintf('markethub.%s', $sdk));
+            }
 
-        if (array_key_exists('mercadolivre', $config)) {
-            $parameters = $config['mercadolivre'];
-        } else {
-            $parameters = $container->getParameter('markethub.mercadolivre');
-        }
-
-        foreach([
-            'Gpupo\MarkethubBundle\Factory\MercadolivreFactory',
-            'Gpupo\MercadolivreSdk\Client\Client',
-        ] as $serviceName) {
-            $definition = $container->getDefinition($serviceName);
+            $definition = $container->getDefinition(sprintf('Gpupo\MarkethubBundle\Factory\%sFactory', ucfirst($sdk)));
             $definition->replaceArgument(0, $parameters);
         }
 

@@ -40,6 +40,7 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('register_path')->defaultValue('')->end()
             ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
             ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
+            ->booleanNode('app_url')->defaultValue('http://localhost:8000')->end()
             ->end()
             ->end()
                 //mercadolivre-sdk eof
