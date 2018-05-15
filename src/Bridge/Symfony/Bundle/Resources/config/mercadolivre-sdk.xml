@@ -53,10 +53,17 @@
         </service>
 
         <!-- Command -->
+        <service id="markethub.mercadolivre.checklist_command" class="Gpupo\MercadolivreSdk\Console\Command\ChecklistCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command -->
         <service id="markethub.mercadolivre.auth_command" class="Gpupo\MercadolivreSdk\Console\Command\AuthCommand">
             <argument type="service" id="markethub.mercadolivre.factory" />
             <tag name="console.command" />
         </service>
+
 
     </services>
 </container>
