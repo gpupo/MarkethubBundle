@@ -57,6 +57,7 @@ class AppKernel extends Kernel
 }
 ```
 
+
 ## Setup
 
 app/config/parameters.yml :
@@ -101,6 +102,11 @@ markethub:
 - createOrder
 
 
+## Commands
+
+### View a product info
+
+	./bin/console  markethub:mercadolivre:catalog:product:view MLB23375818902
 
 ---
 
