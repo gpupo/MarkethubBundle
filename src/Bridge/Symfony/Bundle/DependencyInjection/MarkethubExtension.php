@@ -37,6 +37,12 @@ class MarkethubExtension extends Extension
             $loader->load($file->getRelativePathname());
         }
 
+        //Load Commands
+        $finder->files()->name('*.commands.xml')->in($configPath);
+        foreach ($finder as $file) {
+            $loader->load($file->getRelativePathname());
+        }
+
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
 

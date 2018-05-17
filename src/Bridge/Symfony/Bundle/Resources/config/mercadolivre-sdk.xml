@@ -20,7 +20,6 @@
         </parameter>
     </parameters>
    <services>
-
         <!-- Factory -->
         <service id="Gpupo\MarkethubBundle\Factory\MercadolivreFactory" public="false" >
           <argument>%markethub.mercadolivre%</argument>
@@ -42,36 +41,5 @@
             <argument>%markethub.mercadolivre.order.manager.class%</argument>
             <argument type="tagged" tag="markethub.order.manager" />
         </service>
-
-        <!-- Command -->
-        <service id="markethub.mercadolivre.auth_checklist_command" class="Gpupo\MercadolivreSdk\Console\Command\Auth\ChecklistCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
-            <tag name="console.command" />
-        </service>
-
-        <!-- Command -->
-        <service id="markethub.mercadolivre.auth_refresh_command" class="Gpupo\MercadolivreSdk\Console\Command\Auth\RefreshCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
-            <tag name="console.command" />
-        </service>
-
-        <!-- Command -->
-        <service id="markethub.mercadolivre.auth_token_command" class="Gpupo\MercadolivreSdk\Console\Command\Auth\TokenCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
-            <tag name="console.command" />
-        </service>
-
-        <!-- Command -->
-        <service id="markethub.mercadolivre.catalog_product_list_command" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\ProductListCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
-            <tag name="console.command" />
-        </service>
-
-        <!-- Command -->
-        <service id="markethub.mercadolivre.user_me_command" class="Gpupo\MercadolivreSdk\Console\Command\User\MeCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
-            <tag name="console.command" />
-        </service>
-
     </services>
 </container>

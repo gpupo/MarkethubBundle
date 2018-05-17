@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <!-- auto generated at 2018-05-17 16:58:30 -->
+        
+        <!-- Command markethub:mercadolivre:auth:checklist | Check Mercado Livre files -->
+        <service id="markethub.mercadolivre.auth.checklist" class="Gpupo\MercadolivreSdk\Console\Command\Auth\ChecklistCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command markethub:mercadolivre:auth:refresh | Refresh Mercado Livre token -->
+        <service id="markethub.mercadolivre.auth.refresh" class="Gpupo\MercadolivreSdk\Console\Command\Auth\RefreshCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command markethub:mercadolivre:auth:token | Get Mercado Livre token -->
+        <service id="markethub.mercadolivre.auth.token" class="Gpupo\MercadolivreSdk\Console\Command\Auth\TokenCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command markethub:mercadolivre:catalog:product:list | Get the product list on Mercado Livre -->
+        <service id="markethub.mercadolivre.catalog.product.list" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ListCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command markethub:mercadolivre:catalog:product:view | Get the description of product on Mercado Livre -->
+        <service id="markethub.mercadolivre.catalog.product.view" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ViewCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+        <!-- Command markethub:mercadolivre:user:me | Mercado Livre user info -->
+        <service id="markethub.mercadolivre.user.me" class="Gpupo\MercadolivreSdk\Console\Command\User\MeCommand">
+            <argument type="service" id="markethub.mercadolivre.factory" />
+            <tag name="console.command" />
+        </service>
+
+    </services>
+ </container>
