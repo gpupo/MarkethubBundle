@@ -24,6 +24,7 @@
         <service id="Gpupo\MarkethubBundle\Factory\MercadolivreFactory" public="false" >
           <argument>%markethub.mercadolivre%</argument>
           <argument type="service" id="logger" on-invalid="ignore"></argument>
+          <argument type="service" id="cache" on-invalid="ignore"></argument>
           <argument type="tagged" tag="markethub.factory" />
         </service>
         <service id="markethub.mercadolivre.factory" alias="Gpupo\MarkethubBundle\Factory\MercadolivreFactory" />
