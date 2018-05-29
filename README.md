@@ -38,29 +38,21 @@ Usando [Composer](http://getcomposer.com):
 
     composer require gpupo/markethub-bundle: "^2.0"
 
-Registre o bundle no Kernel:
+Registre o bundle:
 
 ```php
 <?php
-// app/AppKernel.php
-// ...
-class AppKernel extends Kernel
-{
-    public function registerBundles()
-    {
-        return array(
-            //...
-            new Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\MarkethubBundle(),
-        );
-    }
-    // ...
-}
+// config/bundles.php
+
+Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\MarkethubBundle::class => ['all' => true],
+
+
 ```
 
 
 ## Setup
 
-app/config/parameters.yml :
+config/parameters.yml :
 
 ```yaml
 parameters:
@@ -68,7 +60,7 @@ parameters:
     markethub_submarino_api_token: 'MyApiToken'
 ```
 
-app/config/config_dev.yml:
+config/config_dev.yml:
 
 ```yaml
 markethub:
