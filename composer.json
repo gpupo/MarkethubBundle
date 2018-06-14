@@ -18,7 +18,7 @@
         "symfony/http-kernel": "^4.1",
         "symfony/dependency-injection": "^4.1",
         "symfony/config": "^4.1",
-        "symfony/monolog-bundle": "^4.1",
+        "symfony/monolog-bundle": "^3.3",
         "gpupo/common-sdk": "^4.4",
         "gpupo/mercadolivre-sdk": "^4.0",
         "symfony/finder": "^4.1",
