@@ -14,18 +14,18 @@
         }
     },
     "require": {
-        "php": ">=7.2",
-        "symfony/http-kernel": ">=4.1",
-        "symfony/dependency-injection": ">=4.1",
-        "symfony/config": ">=4.1",
-        "symfony/monolog-bundle": ">=3.2",
-        "gpupo/common-sdk": ">=4.4",
-        "gpupo/mercadolivre-sdk": ">=2.2",
-        "symfony/finder": ">=4.1",
-        "theseer/tokenizer": ">=1.1"
+        "php": "^7.2",
+        "symfony/http-kernel": "^4.1",
+        "symfony/dependency-injection": "^4.1",
+        "symfony/config": "^4.1",
+        "symfony/monolog-bundle": "^4.1",
+        "gpupo/common-sdk": "^4.4",
+        "gpupo/mercadolivre-sdk": "^4.0",
+        "symfony/finder": "^4.1",
+        "theseer/tokenizer": "^1.1"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": ">=4.1"
+        "symfony/phpunit-bridge": "^4.1"
     },
     "scripts": {
     },

@@ -36,7 +36,7 @@ As versões 1.x rodam com PHP > 5.3. Na versão >2, apenas PHP 7 ou superior é 
 
 Usando [Composer](http://getcomposer.com):
 
-    composer require gpupo/markethub-bundle: "^2.0"
+    composer require gpupo/markethub-bundle
 
 Registre o bundle:
 

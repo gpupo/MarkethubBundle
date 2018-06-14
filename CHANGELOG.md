@@ -1,4 +1,10 @@
 
+VERSION 4  MAJOR VERSION 4
+==========================
+
+   Version 4.0 - Major version 4
+      14/06/2018 11:50  4.0.0  initial release
+
 VERSION 3  ARCHIEVE OLD SDKS
 ============================
 
