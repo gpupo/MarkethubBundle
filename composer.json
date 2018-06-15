@@ -21,6 +21,7 @@
         "symfony/monolog-bundle": "^3.3",
         "gpupo/common-sdk": "^4.4",
         "gpupo/mercadolivre-sdk": "^4.0",
+        "gpupo/mercadopago-sdk": "dev-master",
         "symfony/finder": "^4.1",
         "theseer/tokenizer": "^1.1"
     },

@@ -2,7 +2,7 @@
 
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         colors="true"
+         colors="false"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
@@ -10,7 +10,6 @@
          stopOnFailure="false"
          syntaxCheck="false"
          bootstrap="vendor/autoload.php"
-         mapTestClassNameToCoveredClassName="true"
 >
     <testsuites>
         <testsuite name="Main Test Suite">

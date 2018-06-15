@@ -23,7 +23,6 @@
    <arg value="install"/>
   </exec>
  </target>
- <target name="ship" description="Tests, report, documentation" depends="phpunit,codeclimate,ocular,rev"/>
  <target name="travis" description="Run tests" depends="composer-rebuild,phpunit"/>
  <target name="test" description="Run tests" depends="phpunit"/>
  <target name="phpunit" description="Generate Reports">
@@ -32,7 +31,6 @@
   <exec executable="${basedir}/vendor/bin/simple-phpunit" outputproperty="log">
     <arg value="-c"/>
     <arg value="phpunit.xml.dist"/>
-    <arg value="--debug"/>
    </exec>
   <echo message="${log}"/>
   <condition property="onSuccess">
@@ -81,34 +79,4 @@ Name | Version | Description
 ---
 </echo>
  </target>
- <target name="box.phar" depends="box.check" unless="box.file.exists">
-   <get src="https://github.com/box-project/box2/releases/download/2.5.2/box-2.5.2.phar" dest="${basedir}/box.phar" skipexisting="false"/>
- </target>
- <target name="box.check">
-   <condition property="box.file.exists">
-     <available file="${basedir}/box.phar" type="file" />
-   </condition>
- </target>
- <target name="box.build" depends="box.phar" description="Build Phar">
-     <exec executable="php">
-         <arg value="${basedir}/box.phar"/>
-         <arg value="build"/>
-     </exec>
- </target>
-  <target name="ocular.phar" depends="ocular.check" unless="ocular.file.exists">
-   <get src="https://scrutinizer-ci.com/ocular.phar" dest="${basedir}/ocular.phar" skipexisting="false"/>
-  </target>
-  <target name="ocular.check">
-   <condition property="ocular.file.exists">
-     <available file="${basedir}/ocular.phar" type="file" />
-   </condition>
-  </target>
-  <target name="ocular" depends="ocular.phar" description="upload report">
-     <exec executable="php">
-         <arg value="${basedir}/ocular.phar"/>
-         <arg value="code-coverage:upload"/>
-         <arg value="--format=php-clover"/>
-         <arg value="build/logs/clover.xml"/>
-     </exec>
-  </target>
 </project>
