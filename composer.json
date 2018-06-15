@@ -10,7 +10,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Gpupo\\Tests\\MarkethubBundle\\": "tests/"
+            "Gpupo\\MarkethubBundle\\Tests\\": "tests/"
         }
     },
     "require": {

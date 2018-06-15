@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\MarkethubBundle\Traits;
+namespace Gpupo\MarkethubBundle\Tests\Traits;
 
 use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection\MarkethubExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;

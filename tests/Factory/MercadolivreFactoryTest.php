@@ -15,7 +15,7 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Tests\Factory;
 
 use Gpupo\MarkethubBundle\Factory\MercadolivreFactory;
 

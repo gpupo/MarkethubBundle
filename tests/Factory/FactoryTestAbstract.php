@@ -15,10 +15,10 @@ declare(strict_types=1);
  *
  */
 
-namespace Gpupo\Tests\MarkethubBundle\Factory;
+namespace Gpupo\MarkethubBundle\Tests\Factory;
 
 use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
-use Gpupo\Tests\MarkethubBundle\Traits\SetupContainerTrait;
+use Gpupo\MarkethubBundle\Tests\Traits\SetupContainerTrait;
 
 abstract class FactoryTestAbstract extends CommonTest
 {
