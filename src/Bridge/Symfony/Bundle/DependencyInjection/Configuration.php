@@ -29,21 +29,26 @@ class Configuration implements ConfigurationInterface
             ->root('markethub')
             ->children()
             ->booleanNode('enabled')->defaultTrue()->end()
-                //mercadolivre-sdk
-            ->arrayNode('mercadolivre')
-            ->children()
+            //mercadolivre-sdk
+            ->arrayNode('mercadolivre')->children()
             ->booleanNode('enabled')->defaultFalse()->end()
             ->scalarNode('client_id')->defaultValue('')->end()
             ->scalarNode('access_token')->defaultValue('')->end()
             ->scalarNode('api_version')->defaultValue('sandbox')->end()
             ->booleanNode('verbose')->defaultFalse()->end()
-            ->scalarNode('register_path')->defaultValue('')->end()
-            ->scalarNode('ssl_version')->defaultValue('SecureTransport')->end()
-            ->booleanNode('ssl_verify_peer')->defaultTrue()->end()
-            ->booleanNode('app_url')->defaultValue('http://localhost:8000')->end()
-            ->end()
-            ->end()
-                //mercadolivre-sdk eof
+            ->scalarNode('app_url')->defaultValue('http://localhost:8000')->end()
+            ->end()->end()
+            //mercadolivre-sdk eof
+
+            //mercadopago-sdk
+            ->arrayNode('mercadopago')->children()
+            ->booleanNode('enabled')->defaultFalse()->end()
+            ->scalarNode('client_id')->defaultValue('')->end()
+            ->scalarNode('client_secret')->defaultValue('')->end()
+            ->scalarNode('user_id')->defaultValue('')->end()
+            ->booleanNode('verbose')->defaultFalse()->end()
+            ->end()->end()
+            //mercadopago-sdk eof
 
             ->end();
 
