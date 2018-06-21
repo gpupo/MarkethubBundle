@@ -19,10 +19,10 @@
         "symfony/dependency-injection": "^4.1",
         "symfony/config": "^4.1",
         "symfony/monolog-bundle": "^3.3",
-        "gpupo/common-sdk": "^4.4.4",
+        "gpupo/common-sdk": "^4.0|dev-master",
         "gpupo/mercadolivre-sdk": "dev-master",
         "gpupo/mercadopago-sdk": "dev-master",
-        "gpupo/common-schema": "^4.0",
+        "gpupo/common-schema": "^4.0|dev-master",
         "symfony/finder": "^4.1",
         "theseer/tokenizer": "^1.1"
     },
