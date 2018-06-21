@@ -8,9 +8,7 @@ build:
                 - php-scrutinizer-run --enable-security-analysis
                 -
                     command: 'ant test'
-                    coverage:
-                        file: 'build/logs/clover.xml'
-                        format: 'clover'
+
 filter:
   paths: [src/*]
   dependency_paths: [vendor/]

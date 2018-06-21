@@ -17,17 +17,18 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Factory;
 
-use Gpupo\MercadolivreSdk\Factory;
+use Gpupo\MercadopagoSdk\Factory;
 
-class MercadolivreFactory extends Factory implements FactoryInterface
+class MercadopagoFactory extends Factory implements FactoryInterface
 {
-    const id = 'markethub.mercadolivre.factory';
+    const id = 'markethub.mercadopago.factory';
 
     public function setClient(array $clientOptions = null)
     {
         $clientOptions = [
             'client_id' => $this->options['client_id'],
-            'access_token' => $this->options['access_token'],
+            'client_secret' => $this->options['client_secret'],
+            'user_id' => $this->options['user_id'],
             'verbose' => $this->options['verbose'],
         ];
 

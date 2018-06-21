@@ -45,7 +45,6 @@ class MarkethubExtension extends Extension
 
         $configuration = $this->getConfiguration($configs, $container);
         $config = $this->processConfiguration($configuration, $configs);
-
         foreach ($sdks as $sdk) {
             if (array_key_exists($sdk, $config)) {
                 $parameters = $config[$sdk];

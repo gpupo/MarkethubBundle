@@ -1,0 +1,15 @@
+markethub:
+    enabled:              true
+    mercadolivre:
+        enabled:              false
+        client_id:            ''
+        access_token:         ''
+        api_version:          sandbox
+        verbose:              false
+        app_url:              'http://localhost:8000'
+    mercadopago:
+        enabled:              false
+        client_id:            ''
+        client_secret:        ''
+        user_id:              ''
+        verbose:              false

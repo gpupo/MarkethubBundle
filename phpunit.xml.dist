@@ -7,8 +7,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         stopOnFailure="false"
-         syntaxCheck="false"
+         stopOnFailure="true"
          bootstrap="vendor/autoload.php"
 >
     <testsuites>
@@ -36,9 +35,4 @@
         <const name="VERBOSE" value=""/>
         <const name="REGISTER_PATH" value=""/>
     </php>
-    <logging>
-      <log type="coverage-clover" target="build/logs/clover.xml"/>
-      <log type="testdox-text" target="build/logs/testdox.txt"/>
-      <log type="testdox-html" target="build/logs/testdox.html"/>
-    </logging>
 </phpunit>

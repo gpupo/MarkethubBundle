@@ -17,7 +17,7 @@ use Gpupo\Common\Tools\Inspect;
 
 $output = new ConsoleOutput();
 $finder = new Finder();
-$finder->files()->in('./vendor/gpupo/*/src/')->name("*Command.php")->notName('*Abstract*');
+$finder->files()->in('./vendor/gpupo/*sdk/src/')->name("*Command.php")->notName('*Abstract*');
 $inspect = new Inspect();
 
 $template = <<<'EOF'

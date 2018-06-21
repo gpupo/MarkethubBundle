@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * This file is part of gpupo/markethub-bundle
+ * Created by Gilmar Pupo <contact@gpupo.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ * For more information, see <https://opensource.gpupo.com/>.
+ */
+
+require 'vendor/autoload.php';
+
+use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection\Configuration;
+use Symfony\Component\Config\Definition\Dumper\YamlReferenceDumper;
+
+$configuration = new Configuration();
+$yamlDumper = new YamlReferenceDumper();
+$dump = $yamlDumper->dump($configuration);
+file_put_contents('markethub-bundle.sample.yaml', $dump);

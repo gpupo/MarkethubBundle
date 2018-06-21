@@ -19,6 +19,7 @@ namespace Gpupo\MarkethubBundle\Tests\Factory;
 
 use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
 use Gpupo\MarkethubBundle\Tests\Traits\SetupContainerTrait;
+use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
 
 abstract class FactoryTestAbstract extends CommonTest
 {
@@ -33,9 +34,9 @@ abstract class FactoryTestAbstract extends CommonTest
 
     public function testFalhaAoAcessarFactoryInexistente()
     {
-        $this->expectException(\BadMethodCallException::class);
+        $this->expectException(\Exception::class);
 
-        return $this->getFactory()->createDinossauro([]);
+        return $this->getFactory()->createAcmeBar([]);
     }
 
     /**
@@ -46,7 +47,7 @@ abstract class FactoryTestAbstract extends CommonTest
      */
     public function testAcessoAServicosDeSdk($objectExpected, $serviceId)
     {
-        $object = $this->container->get($serviceId);
+            $object = $this->container->get($serviceId);
         $this->assertInstanceOf($objectExpected, $object);
     }
 

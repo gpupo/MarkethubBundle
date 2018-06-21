@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="markethub.mercadopago.client.class">Gpupo\MercadopagoSdk\Client\Client</parameter>
+        <parameter key="markethub.mercadopago.movement.manager.class">Gpupo\MercadopagoSdk\Entity\MovementManager</parameter>
+        <parameter key="markethub.mercadopago" type="collection">
+            <parameter key="client_id" type="string"/>
+            <parameter key="client_secret" type="string"/>
+            <parameter key="user_id" type="string"/>
+            <parameter key="verbose" type="string">false</parameter>
+        </parameter>
+    </parameters>
+   <services>
+        <!-- Factory -->
+        <service id="Gpupo\MarkethubBundle\Factory\MercadopagoFactory" public="true" >
+          <argument>%markethub.mercadopago%</argument>
+          <argument type="service" id="logger" on-invalid="ignore"></argument>
+          <argument type="service" id="cache" on-invalid="ignore"></argument>
+          <argument type="tagged" tag="markethub.factory" />
+        </service>
+        <service id="markethub.mercadopago.factory" alias="Gpupo\MarkethubBundle\Factory\MercadopagoFactory" />
+
+        <!-- Movement -->
+        <service id="markethub.mercadopago.movement.manager" class="%markethub.mercadopago.movement.manager.class%" public="true">
+            <factory service="markethub.mercadopago.factory" method="factoryManager" />
+            <argument type="tagged" tag="markethub.movement.manager" />
+            <argument>%markethub.mercadopago.movement.manager.class%</argument>
+        </service>
+
+    </services>
+</container>
