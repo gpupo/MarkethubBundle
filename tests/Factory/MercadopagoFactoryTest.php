@@ -18,6 +18,7 @@ declare(strict_types=1);
 namespace Gpupo\MarkethubBundle\Tests\Factory;
 
 use Gpupo\MarkethubBundle\Factory\MercadopagoFactory;
+use Gpupo\MercadopagoSdk\Entity\PaymentTranslator;
 
 /**
  * @coversNothing
@@ -45,6 +46,7 @@ class MercadopagoFactoryTest extends FactoryTestAbstract
     public function dataProviderObjetos()
     {
         return [
+            [PaymentTranslator::class, 'paymentTranslator', []],
         ];
     }
 }
