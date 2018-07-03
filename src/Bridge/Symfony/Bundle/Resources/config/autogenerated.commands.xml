@@ -3,107 +3,107 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <!-- auto generated at 2018-06-20 17:33:10 -->
+        <!-- auto generated at 2018-07-03 14:01:27 -->
         
         <!-- Command markethub:mercadolivre:catalog:product:view | Get the description of product on Mercado Livre -->
         <service id="markethub.mercadolivre.catalog.product.view" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ViewCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:catalog:product:list | Get the product list on Mercado Livre -->
         <service id="markethub.mercadolivre.catalog.product.list" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ListCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:schema:order | Dump Order Schema -->
         <service id="markethub.mercadolivre.schema.order" class="Gpupo\MercadolivreSdk\Console\Command\Schema\OrderCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:schema:product | Dump Product Schema -->
         <service id="markethub.mercadolivre.schema.product" class="Gpupo\MercadolivreSdk\Console\Command\Schema\ProductCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:user:me | Mercado Livre user info -->
         <service id="markethub.mercadolivre.user.me" class="Gpupo\MercadolivreSdk\Console\Command\User\MeCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:trading:order:list | Get the Order list on Mercado Livre -->
         <service id="markethub.mercadolivre.trading.order.list" class="Gpupo\MercadolivreSdk\Console\Command\Trading\Order\ListCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:auth:refresh | Refresh Mercado Livre token -->
         <service id="markethub.mercadolivre.auth.refresh" class="Gpupo\MercadolivreSdk\Console\Command\Auth\RefreshCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:auth:token | Get Mercado Livre token -->
         <service id="markethub.mercadolivre.auth.token" class="Gpupo\MercadolivreSdk\Console\Command\Auth\TokenCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadolivre:auth:checklist | Check Mercado Livre files -->
         <service id="markethub.mercadolivre.auth.checklist" class="Gpupo\MercadolivreSdk\Console\Command\Auth\ChecklistCommand">
-            <argument type="service" id="markethub.mercadolivre.factory" />
+            <argument type="service" id="markethub.mercadolivre.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:banking:report:view | Get the Report details. -->
         <service id="markethub.mercadopago.banking.report.view" class="Gpupo\MercadopagoSdk\Console\Command\Banking\ViewCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:banking:report:list | Get the Report List. -->
         <service id="markethub.mercadopago.banking.report.list" class="Gpupo\MercadopagoSdk\Console\Command\Banking\ListCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:user:me | MercadoPago user info -->
         <service id="markethub.mercadopago.user.me" class="Gpupo\MercadopagoSdk\Console\Command\User\MeCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:trading:movement:view | Get the Movement detail on MercadoPago -->
         <service id="markethub.mercadopago.trading.movement.view" class="Gpupo\MercadopagoSdk\Console\Command\Trading\Movement\ViewCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:trading:movement:balance | Get the balance amount -->
         <service id="markethub.mercadopago.trading.movement.balance" class="Gpupo\MercadopagoSdk\Console\Command\Trading\Movement\BalanceCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:trading:movement:list | Get the Movement list on MercadoPago -->
         <service id="markethub.mercadopago.trading.movement.list" class="Gpupo\MercadopagoSdk\Console\Command\Trading\Movement\ListCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
-        <!-- Command markethub:mercadopago:auth:token | Get MercadoPago token -->
+        <!-- Command markethub:mercadopago:auth:token | Get new access token -->
         <service id="markethub.mercadopago.auth.token" class="Gpupo\MercadopagoSdk\Console\Command\Auth\TokenCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
         <!-- Command markethub:mercadopago:auth:checklist | Check MercadoPago files -->
         <service id="markethub.mercadopago.auth.checklist" class="Gpupo\MercadopagoSdk\Console\Command\Auth\ChecklistCommand">
-            <argument type="service" id="markethub.mercadopago.factory" />
+            <argument type="service" id="markethub.mercadopago.factory" public="true"/>
             <tag name="console.command" />
         </service>
 

@@ -24,7 +24,7 @@ $template = <<<'EOF'
 
         <!-- Command %s | %s -->
         <service id="%s" class="%s">
-            <argument type="service" id="markethub.%s.factory" />
+            <argument type="service" id="markethub.%s.factory" public="true"/>
             <tag name="console.command" />
         </service>
 
