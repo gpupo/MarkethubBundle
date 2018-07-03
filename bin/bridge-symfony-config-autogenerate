@@ -22,11 +22,12 @@ $inspect = new Inspect();
 
 $template = <<<'EOF'
 
-        <!-- Command %s | %s -->
-        <service id="%s" class="%s">
-            <argument type="service" id="markethub.%s.factory" public="true"/>
+        <!-- Command %3$s | %s -->
+        <service id="%2$s" class="%2$s" public="true">
+            <argument type="service" id="markethub.%6$s.factory"/>
             <tag name="console.command" />
         </service>
+        <service id="%1$s" alias="%2$s" />
 
 EOF;
 
@@ -50,7 +51,7 @@ foreach ($finder as $file) {
     $command = new $class();
     $exploded = explode(':', $command->getName());
     $id = implode('.', $exploded);
-    $string .= sprintf($template,  $command->getName(), $command->getDescription(), $id,  $class, $exploded[1]);
+    $string .= sprintf($template,  $command->getName(), $class, $command->getDescription(), $id,  $class, $exploded[1]);
 }
 
 $xmlContent = sprintf($templateXml, (new \DateTime())->format('Y-m-d H:i:s'), $string);
