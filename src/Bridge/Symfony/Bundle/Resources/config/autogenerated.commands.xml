@@ -3,7 +3,7 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <!-- auto generated at 2018-07-03 14:28:57 -->
+        <!-- auto generated at 2018-07-05 14:09:55 -->
         
         <!-- Command Get the description of product on Mercado Livre | markethub:mercadolivre:catalog:product:view -->
         <service id="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ViewCommand" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ViewCommand" public="true">

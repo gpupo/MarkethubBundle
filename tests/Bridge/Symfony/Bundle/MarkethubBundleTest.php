@@ -18,18 +18,19 @@ declare(strict_types=1);
 namespace Gpupo\MarkethubBundle\Tests\Bridge\Symfony\Bundle;
 
 use Gpupo\MarkethubBundle\Tests\TestCaseAbstract;;
-use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection\Configuration;
-use PHPUnit\Framework\TestCase;
-use Prophecy\Argument;
-use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\MarkethubBundle;
+use Gpupo\MarkethubBundle\Tests\Traits\SetupContainerTrait;
 
 class MarkethubBundleTest extends TestCaseAbstract
 {
+    use SetupContainerTrait;
+
     public function testBuild()
     {
-        $containerProphecy = $this->prophesize(ContainerBuilder::class);
         $bundle = new MarkethubBundle();
-        $bundle->build($containerProphecy->reveal());
+        $bundle->setContainer($this->container);
+        $bundle->boot();
+
+        $this->assertSame('MarkethubBundle', $bundle->getName());
     }
 }

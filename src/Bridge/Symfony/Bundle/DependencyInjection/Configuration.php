@@ -50,6 +50,13 @@ class Configuration implements ConfigurationInterface
             ->end()->end()
             //mercadopago-sdk eof
 
+            //common-sdk
+            ->arrayNode('common')->children()
+            ->booleanNode('enabled')->defaultFalse()->end()
+            ->booleanNode('verbose')->defaultFalse()->end()
+            ->end()->end()
+            //common-sdk eof
+
             ->end();
 
 

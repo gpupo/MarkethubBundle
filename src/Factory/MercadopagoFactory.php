@@ -22,16 +22,4 @@ use Gpupo\MercadopagoSdk\Factory;
 class MercadopagoFactory extends Factory implements FactoryInterface
 {
     const id = 'markethub.mercadopago.factory';
-
-    public function setClient(array $clientOptions = null)
-    {
-        $clientOptions = [
-            'client_id' => $this->options['client_id'],
-            'client_secret' => $this->options['client_secret'],
-            'user_id' => $this->options['user_id'],
-            'verbose' => $this->options['verbose'],
-        ];
-
-        return parent::setClient($clientOptions);
-    }
 }

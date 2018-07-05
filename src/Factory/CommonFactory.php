@@ -17,9 +17,9 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Factory;
 
-use Gpupo\MercadolivreSdk\Factory;
+use Gpupo\CommonSdk\Factory;
 
-class MercadolivreFactory extends Factory implements FactoryInterface
+class CommonFactory extends Factory implements FactoryInterface
 {
-    const id = 'markethub.mercadolivre.factory';
+    const id = 'markethub.common.factory';
 }

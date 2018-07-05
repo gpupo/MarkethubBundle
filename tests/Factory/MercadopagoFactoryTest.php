@@ -28,6 +28,22 @@ class MercadopagoFactoryTest extends FactoryTestAbstract
     protected $factoryClass = MercadopagoFactory::class;
     protected $factoryId = 'test.'.MercadopagoFactory::class;
 
+    public function getFactory()
+    {
+        return parent::getFactory()->setOptions([
+            'client_id' => '9874443',
+            'client_secret' => 'Red touch',
+            'access_token' => 'MHS5b3cc535e4b0-mercadopago-42f9f26ba249',
+            'user_id' => 1123,
+            'refresh_token' => 66777,
+            'verbose' => true,
+            'cacheTTL' => 3600,
+            'offset' => 5,
+            'limit' => 20,
+        ]);
+    }
+
+
     public function testIsAFactory()
     {
         $factory = new MercadopagoFactory();

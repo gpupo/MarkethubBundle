@@ -17,22 +17,23 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Tests\Factory;
 
-use Gpupo\MarkethubBundle\Factory\MercadolivreFactory;
+use Gpupo\MarkethubBundle\Factory\CommonFactory;
+use Gpupo\CommonSdk\Entity\PaymentTranslator;
 
 /**
  * @coversNothing
  */
-class MercadolivreFactoryTest extends FactoryTestAbstract
+class CommonFactoryTest extends FactoryTestAbstract
 {
-    protected $factoryClass = MercadolivreFactory::class;
-    protected $factoryId = 'test.'.MercadolivreFactory::class;
+    protected $factoryClass = CommonFactory::class;
+    protected $factoryId = 'test.'.CommonFactory::class;
 
     public function getFactory()
     {
         return parent::getFactory()->setOptions([
             'client_id' => '987643',
-            'client_secret' => 'Blue touch',
-            'access_token' => 'XZHS5b3cc535-mercadolivre-e4b042f9f26ba249',
+            'client_secret' => 'Remarkable touch',
+            'access_token' => 'XZHS5b3cc535-common-e4b042f9f26ba249',
             'user_id' => 1123,
             'refresh_token' => 66777,
             'verbose' => true,
@@ -42,18 +43,24 @@ class MercadolivreFactoryTest extends FactoryTestAbstract
         ]);
     }
 
+    public function testIsAFactory()
+    {
+        $factory = new CommonFactory();
+
+        $this->assertSame('markethub.common.factory', $factory::id);
+
+    }
+
     public function dataProviderServices()
     {
         return [
-            [MercadolivreFactory::class, $this->factoryId],
+            [CommonFactory::class, $this->factoryId],
         ];
     }
 
     public function dataProviderObjetos()
     {
         return [
-            ['\Gpupo\MercadolivreSdk\Entity\Product\Product', 'product', null],
-            ['\Gpupo\MercadolivreSdk\Entity\Order\Order', 'order', null],
         ];
     }
 }

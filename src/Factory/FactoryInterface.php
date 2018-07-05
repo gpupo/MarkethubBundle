@@ -19,5 +19,5 @@ namespace Gpupo\MarkethubBundle\Factory;
 
 interface FactoryInterface
 {
-    public function setClient(array $clientOptions = null);
+    // public function setClient(array $clientOptions = null);
 }

@@ -1,0 +1,21 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+   <parameters>
+       <parameter key="markethub.common" type="collection">
+           <parameter key="verbose" type="string">false</parameter>
+       </parameter>
+   </parameters>
+   <services>
+        <!-- Factory -->
+        <service id="Gpupo\MarkethubBundle\Factory\CommonFactory" class="Gpupo\MarkethubBundle\Factory\CommonFactory" public="true" >
+          <argument>%markethub.common%</argument>
+          <argument type="service" id="logger" on-invalid="ignore"></argument>
+          <argument type="service" id="cache" on-invalid="ignore"></argument>
+          <argument type="tagged" tag="markethub.factory" />
+        </service>
+        <service id="markethub.common.factory" alias="Gpupo\MarkethubBundle\Factory\CommonFactory" />
+    </services>
+</container>

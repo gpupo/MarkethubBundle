@@ -19,6 +19,8 @@ namespace Gpupo\MarkethubBundle\Tests\Traits;
 
 use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection\MarkethubExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Symfony\Component\DependencyInjection\Alias;
+use Symfony\Component\Cache\Simple\FilesystemCache;
 
 trait SetupContainerTrait
 {
@@ -31,8 +33,12 @@ trait SetupContainerTrait
         $this->container = new ContainerBuilder();
         $this->container->registerExtension($this->extension);
         $this->container->loadFromExtension($this->extension->getAlias());
-        $this->container->compile();
 
+        $this->container->register('filesystemCache', FilesystemCache::class);
+        $this->container->setAlias('cache', new Alias('filesystemCache', true));
+
+        $this->container->compile();
+        
         //Make services public
         foreach ($this->container->getDefinitions() as $id => $definition) {
             $testId = 'test.'.$id;
