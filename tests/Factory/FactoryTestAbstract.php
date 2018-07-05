@@ -17,9 +17,8 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Tests\Factory;
 
-use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
 use Gpupo\MarkethubBundle\Tests\Traits\SetupContainerTrait;
-use Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException;
+use Gpupo\Tests\CommonSdk\FactoryTestAbstract as CommonTest;
 
 abstract class FactoryTestAbstract extends CommonTest
 {
@@ -47,7 +46,7 @@ abstract class FactoryTestAbstract extends CommonTest
      */
     public function testAcessoAServicosDeSdk($objectExpected, $serviceId)
     {
-            $object = $this->container->get($serviceId);
+        $object = $this->container->get($serviceId);
         $this->assertInstanceOf($objectExpected, $object);
     }
 

@@ -17,8 +17,8 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Tests\Factory;
 
+use Gpupo\CommonSdk\Entity\Entity;
 use Gpupo\MarkethubBundle\Factory\CommonFactory;
-use Gpupo\CommonSdk\Entity\PaymentTranslator;
 
 /**
  * @coversNothing
@@ -48,7 +48,6 @@ class CommonFactoryTest extends FactoryTestAbstract
         $factory = new CommonFactory();
 
         $this->assertSame('markethub.common.factory', $factory::id);
-
     }
 
     public function dataProviderServices()
@@ -61,6 +60,7 @@ class CommonFactoryTest extends FactoryTestAbstract
     public function dataProviderObjetos()
     {
         return [
+            [Entity::class, 'generic', []],
         ];
     }
 }

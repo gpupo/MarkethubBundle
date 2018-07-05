@@ -17,10 +17,13 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Tests\Bridge\Symfony\Bundle;
 
-use Gpupo\MarkethubBundle\Tests\TestCaseAbstract;;
 use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\MarkethubBundle;
+use Gpupo\MarkethubBundle\Tests\TestCaseAbstract;
 use Gpupo\MarkethubBundle\Tests\Traits\SetupContainerTrait;
 
+/**
+ * @coversNothing
+ */
 class MarkethubBundleTest extends TestCaseAbstract
 {
     use SetupContainerTrait;

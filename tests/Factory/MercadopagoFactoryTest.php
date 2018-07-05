@@ -43,13 +43,11 @@ class MercadopagoFactoryTest extends FactoryTestAbstract
         ]);
     }
 
-
     public function testIsAFactory()
     {
         $factory = new MercadopagoFactory();
 
         $this->assertSame('markethub.mercadopago.factory', $factory::id);
-
     }
 
     public function dataProviderServices()
