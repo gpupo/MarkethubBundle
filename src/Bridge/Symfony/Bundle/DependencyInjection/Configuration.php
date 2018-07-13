@@ -37,6 +37,8 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('api_version')->defaultValue('sandbox')->end()
             ->booleanNode('verbose')->defaultFalse()->end()
             ->scalarNode('app_url')->defaultValue('http://localhost:8000')->end()
+            ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
+            ->integerNode('limit')->min(10)->max(1000)->defaultValue(100)->end()
             ->end()->end()
             //mercadolivre-sdk eof
 
@@ -47,6 +49,8 @@ class Configuration implements ConfigurationInterface
             ->scalarNode('client_secret')->defaultValue('')->end()
             ->scalarNode('user_id')->defaultValue('')->end()
             ->booleanNode('verbose')->defaultFalse()->end()
+            ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
+            ->integerNode('limit')->min(10)->max(1000)->defaultValue(100)->end()
             ->end()->end()
             //mercadopago-sdk eof
 

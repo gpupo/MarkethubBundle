@@ -14,6 +14,8 @@
             <parameter key="api_version" type="string">sandbox</parameter>
             <parameter key="verbose" type="string">false</parameter>
             <parameter key="app_url" type="string">http://localhost:8000</parameter>
+            <parameter key="cacheTTL"/>
+            <parameter key="limit"/>
         </parameter>
     </parameters>
    <services>

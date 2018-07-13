@@ -12,6 +12,8 @@
             <parameter key="client_secret" type="string"/>
             <parameter key="user_id" type="string"/>
             <parameter key="verbose" type="string">false</parameter>
+            <parameter key="cacheTTL"/>
+            <parameter key="limit"/>
         </parameter>
     </parameters>
    <services>
