@@ -10,6 +10,7 @@
         <parameter key="markethub.mercadopago" type="collection">
             <parameter key="client_id" type="string"/>
             <parameter key="client_secret" type="string"/>
+            <parameter key="common_schema_namespace" type="string">\\App</parameter>
             <parameter key="user_id" type="string"/>
             <parameter key="verbose" type="string">false</parameter>
             <parameter key="cacheTTL"/>

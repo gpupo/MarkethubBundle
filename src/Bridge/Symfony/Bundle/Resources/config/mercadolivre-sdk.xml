@@ -13,6 +13,7 @@
             <parameter key="access_token" type="string"/>
             <parameter key="api_version" type="string">sandbox</parameter>
             <parameter key="verbose" type="string">false</parameter>
+            <parameter key="common_schema_namespace" type="string">\\App</parameter>
             <parameter key="app_url" type="string">http://localhost:8000</parameter>
             <parameter key="cacheTTL"/>
             <parameter key="limit"/>
