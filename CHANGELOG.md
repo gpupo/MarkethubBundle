@@ -2,6 +2,24 @@
 VERSION 4  MAJOR VERSION 4
 ==========================
 
+   Version 4.1 - Add configs
+      01/08/2018 15:28  4.1.0  initial release
+         c2acfab add config
+         1f03c0b Fix limit api
+         aec5f29 Update dependency
+         8929466 Add parameters
+         8d61e68 Update CI config
+         4734802 all green
+         cfb5422 Improve parameters
+         1b21dfe Add alias to services
+         588e5d8 Add public visibility to services
+         2dae79b Fix tests
+         b6e6743 accept common-sdk at dev-master
+         5905f73 Add mercadopago config
+         4e2f051 add mercado pago config
+         f55886c Change Tests Namespace
+         d6f0344 Fix tests
+
    Version 4.0 - Major version 4
       14/06/2018 12:07  4.0.1  fix monolog bundle version
          3fbd404 fix monolog bundle version
