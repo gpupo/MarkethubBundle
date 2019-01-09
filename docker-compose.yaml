@@ -1,7 +1,6 @@
-version: '2'
+version: '3.3'
 services:
-    php-dev:
-        container_name: php-dev
+    php-fpm:
         image: gpupo/container-orchestration:php-dev
         volumes:
-            - ./:/var/www/app
+            - $PWD/:/var/www/app
