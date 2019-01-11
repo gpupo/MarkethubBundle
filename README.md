@@ -6,7 +6,8 @@ Integração de SDKs para Marketplaces com aplicações Symfony 4
 
 ## Compatibilidade
 
-As versões 1.x rodam com PHP > 5.3. Na versão >2, apenas PHP 7 ou superior é suportado.
+Nas versões > 2, apenas PHP 7 ou superior é suportado.
+As versões 1.x rodam com PHP > 5.3.
 
 ## Marketplaces disponíveis
 

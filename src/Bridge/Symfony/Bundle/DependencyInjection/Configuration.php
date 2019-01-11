@@ -24,9 +24,9 @@ class Configuration implements ConfigurationInterface
 {
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $treeBuilder
-            ->root('markethub')
+        $treeBuilder = new TreeBuilder('markethub');
+        $rootNode = $treeBuilder->getRootNode();
+        $rootNode
             ->children()
             ->booleanNode('enabled')->defaultTrue()->end()
             //mercadolivre-sdk
