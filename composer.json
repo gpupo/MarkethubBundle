@@ -1,7 +1,14 @@
 {
     "name": "gpupo/markethub-bundle",
     "description": "Integração de SDKs para Marketplaces Brasileiros",
-    "keywords": ["Marketplace", "B2W", "Via Varejo", "Cnova", "Netshoes", "Mercadolivre", "Symfony", "SDK"],
+    "keywords": ["Marketplace", "B2W", "Via Varejo", "Cnova", "Sky Hub", "Netshoes", "Mercadolivre", "Symfony", "SDK"],
+    "homepage": "https://opensource.gpupo.com/MarkethubBundle/",
+    "authors": [
+        {
+            "name": "Gilmar Pupo",
+            "email": "contact@gpupo.com"
+        }
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -14,16 +21,15 @@
         }
     },
     "require": {
-        "php": "^7.2",
+        "php": "^7.3",
         "symfony/http-kernel": "^4.2.2",
         "symfony/dependency-injection": "^4.2.2",
         "symfony/config": "^4.2.2",
         "symfony/monolog-bundle": "^3.3",
         "gpupo/mercadolivre-sdk": "^4.2",
         "gpupo/mercadopago-sdk": "^4.2",
-        "symfony/finder": "^4.2.2",
+        "gpupo/submarino-sdk": "dev-master",
         "theseer/tokenizer": "^1.1",
-        "symfony/cache": "^4.2.2"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.2.2",
@@ -32,7 +38,6 @@
     "scripts": {
     },
     "suggest": {
-        "gpupo/submarino-sdk": "Allows to integrate with B2W group",
         "gpupo/cnova-sdk": "Allows to integrate with Via Varejo group",
         "gpupo/netshoes-sdk": "Allows to integrate with Netshoes/Zattini group"
     },

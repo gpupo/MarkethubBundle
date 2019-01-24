@@ -9,25 +9,12 @@ Integração de SDKs para Marketplaces com aplicações Symfony 4
 Nas versões > 2, apenas PHP 7 ou superior é suportado.
 As versões 1.x rodam com PHP > 5.3.
 
-## Marketplaces disponíveis
+## Integrações disponíveis
 
-- B2W (v1.x)
-- Cnova (v1.x)
-- Netshoes (v1.x)
-- Mercado Livre (v1.x, v2.x)
-
-
----
-
-## Agradecimentos
-
-* A todos os que [contribuiram com patchs](https://github.com/gpupo/MarkethubBundle/contributors);
-* Aos que [fizeram sugestões importantes](https://github.com/gpupo/MarkethubBundle/issues);
-* Aos desenvolvedores que criaram as [bibliotecas utilizadas neste componente](https://github.com/gpupo/MarkethubBundle/blob/master/Resources/doc/libraries-list.md).
-
- _- [Gilmar Pupo](http://www.gpupo.com/)_
-
-
+- B2W (v1, v2)
+- Cnova (v1)
+- Netshoes (v1)
+- Mercado Livre (v1, v2)
 
 ## Instalação
 
