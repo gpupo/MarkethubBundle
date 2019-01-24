@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="markethub.submarino.client.class">Gpupo\SubmarinoSdk\Client\Client</parameter>
+        <parameter key="markethub.submarino.product.manager.class">Gpupo\SubmarinoSdk\Entity\Product\Manager</parameter>
+        <parameter key="markethub.submarino.order.manager.class">Gpupo\SubmarinoSdk\Entity\Order\Manager</parameter>
+        <parameter key="markethub.submarino" type="collection">
+            <parameter key="user_email" type="string"/>
+            <parameter key="api_key" type="string"/>
+            <parameter key="accountmanager_key" type="string"/>
+            <parameter key="verbose" type="string">false</parameter>
+            <parameter key="common_schema_namespace" type="string">\\App</parameter>
+            <parameter key="app_url" type="string">http://localhost:8000</parameter>
+            <parameter key="cacheTTL"/>
+            <parameter key="limit"/>
+        </parameter>
+    </parameters>
+   <services>
+        <!-- Factory -->
+        <service id="Gpupo\MarkethubBundle\Factory\SubmarinoFactory" public="false" >
+          <argument>%markethub.submarino%</argument>
+          <argument type="service" id="logger" on-invalid="ignore"></argument>
+          <argument type="service" id="cache" on-invalid="ignore"></argument>
+          <argument type="tagged" tag="markethub.factory" />
+        </service>
+        <service id="markethub.submarino.factory" alias="Gpupo\MarkethubBundle\Factory\SubmarinoFactory" />
+
+        <!-- Product -->
+        <service id="markethub.submarino.product.manager" class="%markethub.submarino.product.manager.class%" public="true">
+            <factory service="markethub.submarino.factory" method="factoryManager" />
+            <argument type="tagged" tag="markethub.product.manager" />
+            <argument>%markethub.submarino.product.manager.class%</argument>
+        </service>
+
+        <!-- Order -->
+        <service id="markethub.submarino.order.manager" class="%markethub.submarino.order.manager.class%" public="true">
+            <factory service="markethub.submarino.factory" method="factoryManager" />
+            <argument>%markethub.submarino.order.manager.class%</argument>
+            <argument type="tagged" tag="markethub.order.manager" />
+        </service>
+    </services>
+</container>
