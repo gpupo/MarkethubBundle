@@ -9,7 +9,10 @@
  * For more information, see <https://opensource.gpupo.com/>.
  */
 
-require 'vendor/autoload.php';
+
+namespace Gpupo\MarketBundle\Console;
+
+require dirname(__DIR__).'/config/bootstrap.php';
 
 use Symfony\Component\Console\Output\ConsoleOutput;
 use Gpupo\MarkethubBundle\Bridge\Symfony\Bundle\DependencyInjection\MarkethubExtension;
