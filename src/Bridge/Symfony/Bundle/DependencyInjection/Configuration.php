@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of gpupo/markethub-bundle
+ * This file is part of gpupo/MarketBundle
  * Created by Gilmar Pupo <contact@gpupo.com>
  * For the information of copyright and license you should read the file
  * LICENSE which is distributed with this source code.
@@ -31,29 +31,29 @@ class Configuration implements ConfigurationInterface
             ->booleanNode('enabled')->defaultTrue()->end()
             //mercadolivre-sdk
             ->arrayNode('mercadolivre')->children()
-                ->booleanNode('enabled')->defaultFalse()->end()
-                ->scalarNode('client_id')->defaultValue('')->end()
-                ->scalarNode('access_token')->defaultValue('')->end()
-                ->scalarNode('api_version')->defaultValue('sandbox')->end()
-                ->scalarNode('common_schema_namespace')->defaultValue('\\App')->end()
-                ->booleanNode('verbose')->defaultFalse()->end()
-                ->scalarNode('app_url')->defaultValue('http://localhost')->end()
-                ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
-                ->integerNode('limit')->min(10)->max(50)->defaultValue(50)->end()
+            ->booleanNode('enabled')->defaultFalse()->end()
+            ->scalarNode('client_id')->defaultValue('')->end()
+            ->scalarNode('access_token')->defaultValue('')->end()
+            ->scalarNode('api_version')->defaultValue('sandbox')->end()
+            ->scalarNode('common_schema_namespace')->defaultValue('\\App')->end()
+            ->booleanNode('verbose')->defaultFalse()->end()
+            ->scalarNode('app_url')->defaultValue('http://localhost')->end()
+            ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
+            ->integerNode('limit')->min(10)->max(50)->defaultValue(50)->end()
             ->end()->end()
             //mercadolivre-sdk eof
 
             //mercadopago-sdk
             ->arrayNode('mercadopago')->children()
-                ->booleanNode('enabled')->defaultFalse()->end()
-                ->scalarNode('client_id')->defaultValue('')->end()
-                ->scalarNode('access_token')->defaultValue('')->end()
-                ->scalarNode('api_version')->defaultValue('sandbox')->end()
-                ->scalarNode('common_schema_namespace')->defaultValue('\\App')->end()
-                ->booleanNode('verbose')->defaultFalse()->end()
-                ->scalarNode('app_url')->defaultValue('http://localhost')->end()
-                ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
-                ->integerNode('limit')->min(10)->max(50)->defaultValue(50)->end()
+            ->booleanNode('enabled')->defaultFalse()->end()
+            ->scalarNode('client_id')->defaultValue('')->end()
+            ->scalarNode('access_token')->defaultValue('')->end()
+            ->scalarNode('api_version')->defaultValue('sandbox')->end()
+            ->scalarNode('common_schema_namespace')->defaultValue('\\App')->end()
+            ->booleanNode('verbose')->defaultFalse()->end()
+            ->scalarNode('app_url')->defaultValue('http://localhost')->end()
+            ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
+            ->integerNode('limit')->min(10)->max(50)->defaultValue(50)->end()
             ->end()->end()
             //mercadopago-sdk eof
 
