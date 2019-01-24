@@ -26,10 +26,11 @@
         "symfony/dependency-injection": "^4.2.2",
         "symfony/config": "^4.2.2",
         "symfony/monolog-bundle": "^3.3",
-        "gpupo/mercadolivre-sdk": "^4.2",
-        "gpupo/mercadopago-sdk": "^4.2",
+        "gpupo/common-sdk": "dev-master",
+        "gpupo/mercadolivre-sdk": "dev-master",
+        "gpupo/mercadopago-sdk": "dev-master",
         "gpupo/submarino-sdk": "dev-master",
-        "theseer/tokenizer": "^1.1",
+        "theseer/tokenizer": "^1.1"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.2.2",
@@ -41,6 +42,9 @@
         "gpupo/cnova-sdk": "Allows to integrate with Via Varejo group",
         "gpupo/netshoes-sdk": "Allows to integrate with Netshoes/Zattini group"
     },
-    "minimum-stability": "beta",
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
