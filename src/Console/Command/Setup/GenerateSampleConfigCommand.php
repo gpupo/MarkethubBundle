@@ -40,9 +40,6 @@ final class GenerateSampleConfigCommand extends AbstractCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
-
-
         $configuration = new Configuration();
         $yamlDumper = new YamlReferenceDumper();
         $dump = $yamlDumper->dump($configuration);
@@ -54,6 +51,5 @@ final class GenerateSampleConfigCommand extends AbstractCommand
             '',
             $dump,
         ]);
-
     }
 }

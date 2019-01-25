@@ -1,0 +1,6 @@
+<!-- Command %3$s | %s -->
+<service id="%2$s" class="%2$s" public="true">
+    <argument type="service" id="markethub.%6$s.factory"/>
+    <tag name="console.command" />
+</service>
+<service id="%1$s" alias="%2$s" />
