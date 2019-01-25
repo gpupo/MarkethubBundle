@@ -2,16 +2,9 @@
     <container xmlns="http://symfony.com/schema/dic/services"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
-        <!-- auto generated at 2019-01-25 14:36:52 -->
+        <!-- auto generated at 2019-01-25 14:50:28 -->
         <services>
             
-            <!-- Command Check config files | setup:checklist -->
-            <service id="Gpupo\CommonSdk\Console\Command\Setup\ChecklistCommand" class="Gpupo\CommonSdk\Console\Command\Setup\ChecklistCommand" public="true">
-                <argument type="service" id="markethub.checklist.factory"/>
-                <tag name="console.command" />
-            </service>
-            <service id="setup:checklist" alias="Gpupo\CommonSdk\Console\Command\Setup\ChecklistCommand" />
-
             <!-- Command Get the description of product on Mercado Livre | markethub:mercadolivre:catalog:product:view -->
             <service id="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ViewCommand" class="Gpupo\MercadolivreSdk\Console\Command\Catalog\Product\ViewCommand" public="true">
                 <argument type="service" id="markethub.mercadolivre.factory"/>

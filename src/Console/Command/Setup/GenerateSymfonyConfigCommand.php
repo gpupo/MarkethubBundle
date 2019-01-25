@@ -41,7 +41,11 @@ final class GenerateSymfonyConfigCommand extends AbstractCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $finder = new Finder();
-        $finder->files()->in('./vendor/gpupo/*sdk/src/')->name('*Command.php')->notName('*Abstract*');
+        $finder->files()
+            ->in('./vendor/gpupo/*sdk/src/')
+            ->exclude('Setup')
+            ->name('*Command.php')
+            ->notName('*Abstract*');
         $inspect = new Inspect();
 
         $serviceXml = file_get_contents(__DIR__.'/template/service.xml');
