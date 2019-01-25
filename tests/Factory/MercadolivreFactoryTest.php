@@ -19,9 +19,6 @@ namespace Gpupo\MarkethubBundle\Tests\Factory;
 
 use Gpupo\MarkethubBundle\Factory\MercadolivreFactory;
 
-/**
- * @coversNothing
- */
 class MercadolivreFactoryTest extends FactoryTestAbstract
 {
     protected $factoryClass = MercadolivreFactory::class;

@@ -57,6 +57,20 @@ class Configuration implements ConfigurationInterface
             ->end()->end()
             //mercadopago-sdk eof
 
+            //submarino-sdk
+            ->arrayNode('submarino')->children()
+            ->booleanNode('enabled')->defaultFalse()->end()
+            ->booleanNode('verbose')->defaultFalse()->end()
+            ->scalarNode('user_email')->defaultValue('foo@fill please dot com')->end()
+            ->scalarNode('api_key')->defaultValue('fill')->end()
+            ->scalarNode('accountmanager_key')->defaultValue('fill')->end()
+            ->scalarNode('common_schema_namespace')->defaultValue('\\App')->end()
+            ->scalarNode('app_url')->defaultValue('http://localhost')->end()
+            ->integerNode('cacheTTL')->min(0)->defaultValue(3600)->end()
+            ->integerNode('limit')->min(10)->max(50)->defaultValue(50)->end()
+            ->end()->end()
+            //submarino-sdk eof
+
             //common-sdk
             ->arrayNode('common')->children()
             ->booleanNode('enabled')->defaultFalse()->end()
