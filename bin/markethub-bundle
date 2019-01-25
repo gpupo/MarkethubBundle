@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+
+/*
+ * This file is part of gpupo/submarino-sdk
+ * Created by Gilmar Pupo <contact@gpupo.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ * For more information, see <https://opensource.gpupo.com/>.
+ */
+
+namespace Gpupo\MarkethubBundle\Console;
+
+require dirname(__DIR__).'/config/bootstrap.php';
+
+use Gpupo\MarkethubBundle\Console\Application;
+
+$app = new Application("markethub-bundle");
+$app->init(__NAMESPACE__, dirname(__DIR__));
