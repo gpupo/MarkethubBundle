@@ -7,3 +7,4 @@ Resources/logs/*
 *.lock
 *.cache
 phpunit.xml
+.phan

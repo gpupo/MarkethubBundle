@@ -2,6 +2,23 @@
 VERSION 4  MAJOR VERSION 4
 ==========================
 
+   Version 4.2 - Add submarino-sdk v4
+      25/01/2019 15:30  4.2.0  initial release
+         9b7f5f0 Add Submarino test
+         d18be41 Fix setup
+         c0bbde1 Regenerate config
+         903b2d3 Refactory bridge-symfony-config-autogenerate
+         e439148 Refactory commands
+         4fdba15 Add Makefile
+         3078ec1 Add bootstrap.php
+         28383e7 Add submarino config
+         80b0439 Update test abstract
+         187c3f1 Run CS fixer
+         0c4dfd7 Update cs config
+         7ccf5b1 Add new submarino sdk
+         c46ce46 Update to SF4.2; Fix: A tree builder without a root node is deprecated
+         f453dff Update libs
+
    Version 4.1 - Add configs
       01/08/2018 16:07  4.1.1  Add configs
       01/08/2018 15:28  4.1.0  initial release
