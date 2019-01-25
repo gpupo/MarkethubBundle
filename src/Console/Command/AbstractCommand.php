@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of gpupo/MarkethubBundle
+ * This file is part of gpupo/MarketBundle
  * Created by Gilmar Pupo <contact@gpupo.com>
  * For the information of copyright and license you should read the file
  * LICENSE which is distributed with this source code.
@@ -18,7 +18,6 @@ declare(strict_types=1);
 namespace Gpupo\MarkethubBundle\Console\Command;
 
 use Gpupo\CommonSdk\Console\Command\AbstractCommand as Core;
-use Symfony\Component\Console\Input\InputOption;
 
 /**
  * @codeCoverageIgnore
@@ -26,5 +25,4 @@ use Symfony\Component\Console\Input\InputOption;
 abstract class AbstractCommand extends Core
 {
     const prefix = 'markethub:bundle:';
-
 }

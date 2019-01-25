@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of gpupo/MarkethubBundle
+ * This file is part of gpupo/MarketBundle
  * Created by Gilmar Pupo <contact@gpupo.com>
  * For the information of copyright and license you should read the file
  * LICENSE which is distributed with this source code.
@@ -18,8 +18,8 @@ declare(strict_types=1);
 namespace Gpupo\MarkethubBundle\Console;
 
 use Gpupo\CommonSdk\Console\AbstractApplication;
-use Gpupo\CommonSdk\FactoryInterface;
 use Gpupo\CommonSdk\Factory;
+use Gpupo\CommonSdk\FactoryInterface;
 use Psr\Log\LoggerInterface;
 use Psr\SimpleCache\CacheInterface;
 
