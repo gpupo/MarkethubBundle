@@ -17,11 +17,13 @@ declare(strict_types=1);
 
 namespace Gpupo\MarkethubBundle\Tests\Factory;
 
-use Gpupo\MarkethubBundle\Factory\SubmarinoFactory;
 use Gpupo\CommonSchema\ArrayCollection\Trading\Order\Order;
 use Gpupo\CommonSchema\ArrayCollection\Trading\Product\Product;
+use Gpupo\MarkethubBundle\Factory\SubmarinoFactory;
 
-
+/**
+ * @coversNothing
+ */
 class SubmarinoFactoryTest extends FactoryTestAbstract
 {
     protected $factoryClass = SubmarinoFactory::class;
