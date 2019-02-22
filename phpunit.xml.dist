@@ -27,12 +27,10 @@
             </exclude>
         </whitelist>
     </filter>
-
-    <!-- Customize your parameters ! -->
     <php>
-        <const name="CLIENT_ID" value=""/>
-        <const name="ACCESS_TOKEN" value=""/>
-        <const name="VERBOSE" value=""/>
-        <const name="REGISTER_PATH" value=""/>
+        <ini name="error_reporting" value="-1" />
+        <env name="APP_ENV" value="test" />
+        <env name="SHELL_VERBOSITY" value="-1" />
+        <env name="SYMFONY_PHPUNIT_VERSION" value="7" />
     </php>
 </phpunit>
