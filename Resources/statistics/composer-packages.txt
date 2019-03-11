@@ -1,0 +1,56 @@
+behat/transliterator              v1.2.0  String transliterator
+doctrine/annotations              v1.6.0  Docblock Annotations Parser
+doctrine/cache                    v1.8.0  Caching library offering an object-oriented API for many cache backends
+doctrine/collections              v1.5.0  Collections Abstraction library
+doctrine/common                   v2.10.0 PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, persiste...
+doctrine/dbal                     v2.9.2  Powerful PHP database abstraction layer (DBAL) with many features for database schema introspection and management.
+doctrine/event-manager            v1.0.0  Doctrine Event Manager component
+doctrine/inflector                v1.3.0  Common String Manipulations with regard to casing and singular/plural rules.
+doctrine/instantiator             1.1.0   A small, lightweight utility to instantiate objects in PHP without invoking their constructors
+doctrine/lexer                    v1.0.1  Base library for a lexer that can be used in Top-Down, Recursive Descent Parsers.
+doctrine/orm                      v2.6.3  Object-Relational-Mapper for PHP
+doctrine/persistence              v1.1.0  The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.
+doctrine/reflection               v1.0.0  Doctrine Reflection component
+gedmo/doctrine-extensions         v2.4.36 Doctrine2 behavioral extensions
+gpupo/common                      4.9.0   Common Objects
+gpupo/common-schema               4.7.3   Common schema
+gpupo/common-sdk                  4.10.0  Componente de uso comum entre SDKs para integração a partir de aplicações PHP com Restful webservices
+gpupo/mercadolivre-sdk            4.3.0   SDK Não Oficial para integração a partir de aplicações PHP com APIs Mercadolivre
+gpupo/mercadopago-sdk             4.3.0   SDK Não Oficial para integração a partir de aplicações PHP com APIs Mercadopago
+gpupo/submarino-sdk               3.1.0   SDK Não Oficial para integração a partir de aplicações PHP com as APIs do Submarino Marketplace
+monolog/monolog                   1.24.0  Sends your logs to files, sockets, inboxes, databases and various web services
+phpdocumentor/reflection-common   1.0.1   Common reflection classes used by phpdocumentor to reflect the code structure
+phpdocumentor/reflection-docblock 4.3.0   With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.
+phpdocumentor/type-resolver       0.4.0  
+psr/cache                         1.0.1   Common interface for caching libraries
+psr/container                     1.0.0   Common Container Interface (PHP FIG PSR-11)
+psr/http-client                   1.0.0   Common interface for HTTP clients
+psr/http-factory                  1.0.0   Common interfaces for PSR-7 HTTP message factories
+psr/http-message                  1.0.1   Common interface for HTTP messages
+psr/log                           1.1.0   Common interface for logging libraries
+psr/simple-cache                  1.0.1   Common interfaces for simple caching
+symfony/cache                     v4.2.4  Symfony Cache component with PSR-6, PSR-16, and tags
+symfony/config                    v4.2.4  Symfony Config Component
+symfony/console                   v4.2.4  Symfony Console Component
+symfony/contracts                 v1.0.2  A set of abstractions extracted out of the Symfony components
+symfony/debug                     v4.2.4  Symfony Debug Component
+symfony/dependency-injection      v4.2.4  Symfony DependencyInjection Component
+symfony/dotenv                    v4.2.3  Registers environment variables from a .env file
+symfony/event-dispatcher          v4.2.4  Symfony EventDispatcher Component
+symfony/filesystem                v4.2.4  Symfony Filesystem Component
+symfony/finder                    v4.2.4  Symfony Finder Component
+symfony/http-foundation           v4.2.4  Symfony HttpFoundation Component
+symfony/http-kernel               v4.2.4  Symfony HttpKernel Component
+symfony/lock                      v4.2.3  Symfony Lock Component
+symfony/monolog-bridge            v4.2.4  Symfony Monolog Bridge
+symfony/monolog-bundle            v3.3.1  Symfony MonologBundle
+symfony/phpunit-bridge            v4.2.4  Symfony PHPUnit Bridge
+symfony/polyfill-ctype            v1.10.0 Symfony polyfill for ctype functions
+symfony/polyfill-mbstring         v1.10.0 Symfony polyfill for the Mbstring extension
+symfony/polyfill-php72            v1.10.0 Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions
+symfony/var-dumper                v4.2.4  Symfony mechanism for exploring and dumping PHP variables
+symfony/var-exporter              v4.2.4  A blend of var_export() + serialize() to turn any serializable data structure to plain PHP code
+symfony/yaml                      v4.2.4  Symfony Yaml Component
+theseer/tokenizer                 1.1.0   A small library for converting tokenized PHP source code into XML and potentially other formats
+twig/twig                         v2.6.2  Twig, the flexible, fast, and secure template language for PHP
+webmozart/assert                  1.4.0   Assertions to validate method input/output with nice error messages.

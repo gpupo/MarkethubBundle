@@ -4,12 +4,27 @@ markethub:
         enabled:              false
         client_id:            ''
         access_token:         ''
-        api_version:          sandbox
+        common_schema_namespace: \App
         verbose:              false
-        app_url:              'http://localhost:8000'
+        cacheTTL:             3600
+        limit:                50
     mercadopago:
         enabled:              false
         client_id:            ''
-        client_secret:        ''
-        user_id:              ''
+        access_token:         ''
+        common_schema_namespace: \App
+        verbose:              false
+        cacheTTL:             3600
+        limit:                50
+    submarino:
+        enabled:              false
+        verbose:              false
+        user_email:           'foo@fill please dot com'
+        api_key:              fill
+        accountmanager_key:   fill
+        common_schema_namespace: \App
+        cacheTTL:             3600
+        limit:                50
+    common:
+        enabled:              false
         verbose:              false
