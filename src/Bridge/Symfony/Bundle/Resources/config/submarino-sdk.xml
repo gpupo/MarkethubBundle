@@ -24,7 +24,7 @@
         <service id="Gpupo\MarkethubBundle\Factory\SubmarinoFactory" public="false" >
           <argument>%markethub.submarino%</argument>
           <argument type="service" id="logger" on-invalid="ignore"></argument>
-          <argument type="service" id="cache" on-invalid="ignore"></argument>
+          <argument type="service" id="Symfony\Contracts\Cache\CacheInterface" on-invalid="ignore"></argument>
           <argument type="tagged" tag="markethub.factory" />
         </service>
         <service id="markethub.submarino.factory" alias="Gpupo\MarkethubBundle\Factory\SubmarinoFactory" />

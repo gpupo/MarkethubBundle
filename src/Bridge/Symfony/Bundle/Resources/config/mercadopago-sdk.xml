@@ -22,7 +22,7 @@
         <service id="Gpupo\MarkethubBundle\Factory\MercadopagoFactory" public="true" >
           <argument>%markethub.mercadopago%</argument>
           <argument type="service" id="logger" on-invalid="ignore"></argument>
-          <argument type="service" id="cache" on-invalid="ignore"></argument>
+          <argument type="service" id="Symfony\Contracts\Cache\CacheInterface" on-invalid="ignore"></argument>
           <argument type="tagged" tag="markethub.factory" />
         </service>
         <service id="markethub.mercadopago.factory" alias="Gpupo\MarkethubBundle\Factory\MercadopagoFactory" />
