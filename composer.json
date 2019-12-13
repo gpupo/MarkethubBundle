@@ -22,18 +22,18 @@
     },
     "require": {
         "php": ">=7.4",
-        "symfony/http-kernel": "^4.4.1",
-        "symfony/dependency-injection": "^4.4.1",
-        "symfony/config": "^4.4.1",
+        "symfony/http-kernel": "^5.0",
+        "symfony/dependency-injection": "^5.0",
+        "symfony/config": "^5.0",
         "symfony/monolog-bundle": "^3.5",
-        "gpupo/common-sdk": "^4.15",
-        "gpupo/mercadolivre-sdk": "^4.4.1",
-        "gpupo/mercadopago-sdk": "^4.4",
-        "gpupo/submarino-sdk": "^3.7.2",
-        "theseer/tokenizer": "^1.1.3"
+        "gpupo/common-sdk": "^5.0",
+        "gpupo/mercadolivre-sdk": "^5.0",
+        "gpupo/mercadopago-sdk": "^5.0",
+        "gpupo/submarino-sdk": "^5.0",
+        "theseer/tokenizer": "^1.1"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^4.4.1"
+        "symfony/phpunit-bridge": "^5.0"
     },
     "scripts": {
     },
