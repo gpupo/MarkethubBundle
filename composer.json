@@ -36,10 +36,9 @@
         "symfony/phpunit-bridge": "^5.0"
     },
     "scripts": {
+        "test": "simple-phpunit"
     },
     "suggest": {
-        "gpupo/cnova-sdk": "Allows to integrate with Via Varejo group",
-        "gpupo/netshoes-sdk": "Allows to integrate with Netshoes/Zattini group"
     },
     "config": {
         "preferred-install": "dist"
