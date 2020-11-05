@@ -25,16 +25,16 @@
         "symfony/http-kernel": "^5.1",
         "symfony/dependency-injection": "^5.1",
         "symfony/config": "^5.1",
-        "symfony/monolog-bundle": "^3.5",
+        "symfony/monolog-bundle": "^3.6",
         "gpupo/common-sdk": "^5.1 || ^6.0",
-        "gpupo/mercadolivre-sdk": "^5.1 || ^6.0",
-        "gpupo/mercadopago-sdk": "^5.1 || ^6.0",
-        "gpupo/submarino-sdk": "^5.1 || ^6.0",
-	"gpupo/shipping-services":"^2.3",
+        "gpupo/mercadolivre-sdk": "^5.0 || ^6.0",
+        "gpupo/mercadopago-sdk": "^5.0 || ^6.0",
+        "gpupo/submarino-sdk": "^5.0 || ^6.0",
+	    "gpupo/shipping-services":"^2.4",
         "theseer/tokenizer": "^1.1"
     },
     "require-dev": {
-        "symfony/phpunit-bridge": "^5.1"
+        "symfony/phpunit-bridge": "*"
     },
     "scripts": {
         "test": "simple-phpunit"
