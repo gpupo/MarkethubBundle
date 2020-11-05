@@ -27,7 +27,7 @@
         "symfony/config": "^5.1",
         "symfony/monolog-bundle": "^3.6",
         "gpupo/common-sdk": "^6.0",
-        "gpupo/mercadolivre-sdk": "^5.3",
+        "gpupo/mercadolivre-sdk": "^5.3.1",
         "gpupo/mercadopago-sdk": "^5.3",
         "gpupo/submarino-sdk": "^5.3",
         "gpupo/shipping-services":"^2.4",
