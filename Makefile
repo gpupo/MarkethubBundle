@@ -4,13 +4,25 @@
 .SILENT:
 CURRENT_DIR := $(shell pwd)
 
-#CommonSdk
-include vendor/gpupo/common-sdk/bin/make-file/variables.mk
-include vendor/gpupo/common-sdk/bin/make-file/define.mk
-include vendor/gpupo/common-sdk/bin/make-file/help.mk
+ifneq ($(wildcard vendor/gpupo/common-sdk/bin/make-file/targets/*),)
+	#CommonSdk
+	include vendor/gpupo/common-sdk/bin/make-file/variables.mk
+	include vendor/gpupo/common-sdk/bin/make-file/define.mk
+	include vendor/gpupo/common-sdk/bin/make-file/help.mk
 
-include vendor/gpupo/common-sdk/bin/make-file/functions/*
-include vendor/gpupo/common-sdk/bin/make-file/targets/*
+	include vendor/gpupo/common-sdk/bin/make-file/functions/*
+	include vendor/gpupo/common-sdk/bin/make-file/targets/*
+endif
+
+
+## Install vendor
+install:
+	COMPOSER_MEMORY_LIMIT=9G composer install --prefer-dist --no-scripts
+
+## Install vendor
+install@force:
+	test -f composer.lock && rm -f composer.lock
+	COMPOSER_MEMORY_LIMIT=9G composer install --prefer-dist --no-scripts --ignore-platform-req true
 
 ## Include custom Targets:
 # include bin/make-file/variables.mk

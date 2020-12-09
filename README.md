@@ -7,6 +7,7 @@ Integração de SDKs para Marketplaces com aplicações Symfony 5
 
 ## Compatibilidade
 
+Nas versões > 3, apenas PHP 8 ou superior é suportado.
 Nas versões > 2, apenas PHP 7 ou superior é suportado.
 As versões 1.x rodam com PHP > 5.3.
 
@@ -21,7 +22,7 @@ As versões 1.x rodam com PHP > 5.3.
 
 Usando [Composer](http://getcomposer.com):
 
-    composer require gpupo/markethub-bundle:^5.2
+    composer require gpupo/markethub-bundle
 
 Registre o bundle:
 
