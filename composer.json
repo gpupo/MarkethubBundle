@@ -30,7 +30,8 @@
         "gpupo/mercadopago-sdk": "^6.0|| dev-master",
         "gpupo/submarino-sdk": "^6.0 || dev-master",
         "gpupo/shipping-services":"^3.1 || dev-master",
-        "theseer/tokenizer": "^1.1"
+        "theseer/tokenizer": "^1.1",
+        "gpupo/common-schema": "^6.0"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "*"
