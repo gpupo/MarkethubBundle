@@ -6,7 +6,6 @@ CURRENT_DIR := $(shell pwd)
 
 ## Install vendor
 install:
-	composer self-update --2
 	COMPOSER_MEMORY_LIMIT=9G composer install --prefer-dist --no-scripts
 
 ## Install vendor
