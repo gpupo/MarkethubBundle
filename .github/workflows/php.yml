@@ -10,7 +10,7 @@ on:
       tags: '*'
 jobs:
   run:
-    name: Test with PHP ${{ matrix.php-version }} on ${{ matrix.operating-system }}
+    name: Test with PHP ${{ matrix.php-versions }} on ${{ matrix.operating-system }}
     runs-on: ${{ matrix.operating-system }}
     strategy:
       fail-fast: false
@@ -35,6 +35,12 @@ jobs:
 
       - name: Install dependencies
         run: make install
+      
+      - name: PHP info
+        run: php -i
+      
+      - name: Composer info
+        run: composer info
 
       - name: Run test suite
         run: composer run-script test
