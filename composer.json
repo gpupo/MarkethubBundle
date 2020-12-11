@@ -22,9 +22,9 @@
     },
     "require": {
         "php": "^8.0",
-        "symfony/http-kernel": "^5.1",
-        "symfony/dependency-injection": "^5.1",
-        "symfony/config": "^5.1",
+        "symfony/http-kernel": "^5.2",
+        "symfony/dependency-injection": "^5.2",
+        "symfony/config": "^5.2",
         "symfony/monolog-bundle": "^3.6",
         "gpupo/mercadolivre-sdk": "^6.0 || dev-master",
         "gpupo/mercadopago-sdk": "^6.0|| dev-master",
