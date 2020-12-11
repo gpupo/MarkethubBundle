@@ -10,8 +10,8 @@ on:
       tags: '*'
 jobs:
   run:
-    name: Run
-    runs-on: self-hosted
+    name: Test with PHP ${{ matrix.php-version }} on ${{ matrix.operating-system }}
+    runs-on: ${{ matrix.operating-system }}
     strategy:
       fail-fast: false
       matrix:
