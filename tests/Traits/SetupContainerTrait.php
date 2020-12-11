@@ -27,7 +27,7 @@ trait SetupContainerTrait
     protected $extension;
     protected $container;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->extension = new MarkethubExtension();
         $this->container = new ContainerBuilder();
