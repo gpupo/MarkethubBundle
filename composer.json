@@ -26,12 +26,12 @@
         "symfony/dependency-injection": "^5.2",
         "symfony/config": "^5.2",
         "symfony/monolog-bundle": "^3.6",
-        "gpupo/mercadolivre-sdk": "^6.0 || dev-master",
-        "gpupo/mercadopago-sdk": "^6.0|| dev-master",
-        "gpupo/submarino-sdk": "^6.0 || dev-master",
-        "gpupo/shipping-services":"^3.1 || dev-master",
+        "gpupo/mercadolivre-sdk": "^6.1 || dev-main",
+        "gpupo/mercadopago-sdk": "^6.1|| dev-main",
+        "gpupo/submarino-sdk": "^6.1 || dev-main",
+        "gpupo/shipping-services":"^3.1 || dev-main",
         "theseer/tokenizer": "^1.1",
-        "gpupo/common-schema": "^6.0"
+        "gpupo/common-schema": "^6.3 || dev-main"
     },
     "require-dev": {
         "symfony/phpunit-bridge": "*"
