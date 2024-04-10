@@ -17,5 +17,5 @@ use Gpupo\CommonSdk\Console\Command\AbstractCommand as Core;
  */
 abstract class AbstractCommand extends Core
 {
-    const prefix = 'markethub:bundle:';
+    public const prefix = 'markethub:bundle:';
 }

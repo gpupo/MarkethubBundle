@@ -21,6 +21,7 @@ final class GenerateSampleConfigCommand extends AbstractCommand
     /**
      * {@inheritdoc}
      */
+    #[\Override]
     protected function configure()
     {
         $this
@@ -31,6 +32,7 @@ final class GenerateSampleConfigCommand extends AbstractCommand
     /**
      * {@inheritdoc}
      */
+    #[\Override]
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $configuration = new Configuration();
