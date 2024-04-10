@@ -10,7 +10,7 @@ declare(strict_types=1);
 
 use Symfony\Component\Dotenv\Dotenv;
 
-if (!class_exists('\Gpupo\Common\Console\Application')) {
+if (!class_exists(\Gpupo\Common\Console\Application::class)) {
     require __DIR__.'/../vendor/autoload.php';
 }
 

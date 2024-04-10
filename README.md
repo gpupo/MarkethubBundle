@@ -1,6 +1,6 @@
 # MarkethubBundle
 
-Integração de SDKs para Marketplaces com aplicações Symfony 5
+Integração de SDKs para Marketplaces com aplicações Symfony 6
 
 [![Build Status](https://secure.travis-ci.org/gpupo/MarkethubBundle.png?branch=main)](http://travis-ci.org/gpupo/MarkethubBundle)
 [![Actions Status](https://github.com/gpupo/MarkethubBundle/workflows/CI/badge.svg)](https://github.com/gpupo/MarkethubBundle/actions)

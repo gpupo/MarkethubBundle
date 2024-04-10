@@ -18,6 +18,7 @@ use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 
 class MarkethubExtension extends Extension
 {
+    #[\Override]
     public function load(array $configs, ContainerBuilder $container)
     {
         $sdks = [];
@@ -52,6 +53,7 @@ class MarkethubExtension extends Extension
         return $config;
     }
 
+    #[\Override]
     public function getConfiguration(array $config, ContainerBuilder $container)
     {
         return new Configuration();

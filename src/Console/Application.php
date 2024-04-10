@@ -18,6 +18,7 @@ use Symfony\Contracts\Cache\CacheInterface;
 
 final class Application extends AbstractApplication
 {
+    #[\Override]
     public function factorySdk(array $options, LoggerInterface $logger = null, CacheInterface $cache = null): FactoryInterface
     {
         return new Factory($options, $logger, $cache);
